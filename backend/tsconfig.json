@@ -1,7 +1,14 @@
 {
-  "extends": "../tsconfig.base.json",
   "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
     "outDir": "./build",
-    "rootDir": "./src"
-  }
+    "rootDir": "./src",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "resolveJsonModule": true,
+  },
+  "include": [ "src/**/*.ts" ],
+  "exclude": [ "build", "node_modules" ]
 }

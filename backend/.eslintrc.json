@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "./node_modules/ts-standard/eslintrc.json"
+  ],
+  "ignorePatterns": ["build"],
+  "parserOptions": {
+    "project": "./backend/tsconfig.json"
+  },
+  "rules": {
+    //"@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-misused-promises": "off"
+  }
+}
