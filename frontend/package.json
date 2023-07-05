@@ -9,7 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "lit": "2.7.2"
+    "lit": "2.7.2",
+    "sass": "1.63.6"
   },
   "devDependencies": {
     "ts-standard": "12.0.2",

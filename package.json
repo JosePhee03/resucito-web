@@ -1,16 +1,22 @@
 {
   "name": "resucito-web",
   "version": "1.0.0",
-  "description": "",
+  "description": "Proyecto web que busca llevar el libro de cantos RESUCITO (en español) al mundo digital a traves de la web",
   "main": "index.js",
   "workspaces": [
     "backend",
     "frondend"
   ],
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JosePhee03/resucito-web"
   },
-  "keywords": [],
-  "author": "",
+  "scripts": {
+    "dev:backend": "pnpm run --filter backend dev",
+    "dev:frontend": "pnpm run --filter frontend dev",
+    "dev": "pnpm run dev:backend && pnpm run dev:frontend"
+  },
+  "keywords": ["frondend", "backend", "SPA", "PWA", "typescript", "lit-element"],
+  "author": "Jose Luis Gutierrez <joselugz03@gmail.com>",
   "license": "ISC"
 }
