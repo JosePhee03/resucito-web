@@ -5,7 +5,8 @@ import cors from 'cors'
 
 const QUERY_PARAMS = {
   SKIP: 'skip',
-  LIMIT: 'limit'
+  LIMIT: 'limit',
+  SEARCH: 'q'
 }
 
 const PORT = process.env.PORT ?? 3001
@@ -15,10 +16,6 @@ app.use(cors({ origin: '*' }))
 app.use(express.json())
 
 app.get('/', async (req, res) => {
-  res.send({ canticles, total: canticles.length })
-})
-
-app.get('/query', async (req, res) => {
   const queryParams = req.query
 
   let limit = 10
@@ -27,24 +24,21 @@ app.get('/query', async (req, res) => {
 
   for (const [key, value] of Object.entries(queryParams)) {
     if (Object.values(QUERY_PARAMS).includes(key)) {
-      if (value === undefined) continue
+      if (value === undefined || value === '') continue
       if (key === QUERY_PARAMS.SKIP) skip = +value
       if (key === QUERY_PARAMS.LIMIT) limit = +value
       continue
     }
   }
 
-  for (const canticle of canticles) {
-    if (canticle.page === undefined) continue
+  canticles.forEach((canticle, index) => {
+    if (index >= limit + skip) return
 
-    const numPage = Number(canticle.page)
-    if (numPage > limit + skip) break
-
-    const canticleValid = numPage >= skip
+    const canticleValid = index >= skip
     if (canticleValid) {
       newCanticles.push(canticle)
-    } else continue
-  }
+    }
+  })
 
   res.send({
     canticles: newCanticles,
@@ -54,10 +48,54 @@ app.get('/query', async (req, res) => {
   })
 })
 
+app.get('/search', async (req, res) => {
+  const queryParams = req.query
+  console.log(queryParams)
+
+  let limit = 10
+  let skip = 0
+  let search = ''
+  const newCanticles: any[] = []
+
+  for (const [key, value] of Object.entries(queryParams)) {
+    if (Object.values(QUERY_PARAMS).includes(key)) {
+      if (value === undefined || value === '') continue
+      if (key === QUERY_PARAMS.SKIP) skip = +value
+      if (key === QUERY_PARAMS.LIMIT) limit = +value
+      if (key === QUERY_PARAMS.SEARCH) search = value.toString()
+      continue
+    }
+  }
+
+  const filterCanticles = search === ''
+    ? canticles
+    : canticles.filter(canticle => {
+      if (canticle.lyric.some((letter) => new RegExp(search).test(letter.content))) {
+        return true
+      } else return false
+    })
+
+  filterCanticles.forEach((canticle, index) => {
+    if (index >= limit + skip) return
+
+    const canticleValid = index >= skip
+    if (canticleValid) {
+      newCanticles.push(canticle)
+    }
+  })
+
+  res.send({
+    canticles: newCanticles,
+    total: filterCanticles.length,
+    limit,
+    skip
+  })
+})
+
 app.get('/:page', async (req, res) => {
   const numPage = req.params.page
 
-  const newCanticle = canticles.find(canticle => canticle.page === numPage)
+  const newCanticle = canticles.find((_, index) => index === +numPage)
 
   if (newCanticle === undefined) {
     res.send('Canto no encontrado')
