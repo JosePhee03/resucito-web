@@ -2,21 +2,22 @@
 @import 'styles/fonts';
 
 :root {
-  --font: 'Inter', sans-serif;
+  --font: 'Inter';
   
   --text-color: #000000;
   --primary-color: #FFFFFF;
   --secondary-color: #FF0000;
-  --neutral-color: #CCCCCC;
+  --neutral-light-color: #CCCCCC;
+  --neutral-dark-color: #333;
   --yellow: #FDEC54;
   --green: #C3F2C2;
   --blue: #81D4FA;
   
-  --text-xl: 1.5rem;
-  --text-lg: 1.125rem;
-  --text-md: 1rem;
-  --text-sm: 0.875rem;
-  --text-xs: 0.75rem;
+  --text-xl: 1.5em;
+  --text-lg: 1.125em;
+  --text-md: 1em;
+  --text-sm: 0.875em;
+  --text-xs: 0.75em;
 
 }
 

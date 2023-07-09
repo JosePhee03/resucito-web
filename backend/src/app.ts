@@ -1,22 +1,17 @@
 import 'dotenv/config'
 import express from 'express'
-import canticles from './RESUCITO/ES/v4/2014.json' assert { type: 'json' }
+import canticles from './RESUCITO/ES/v5/2014.json' assert { type: 'json' }
+import cors from 'cors'
 
 const QUERY_PARAMS = {
   SKIP: 'skip',
   LIMIT: 'limit'
 }
 
-export const STAGE: { [key: number]: string } = {
-  0: 'precatecumenado',
-  1: 'catecumenado',
-  2: 'eleccion',
-  3: 'liturgia'
-}
-
 const PORT = process.env.PORT ?? 3001
 const app = express()
 
+app.use(cors({ origin: '*' }))
 app.use(express.json())
 
 app.get('/', async (req, res) => {
@@ -40,9 +35,9 @@ app.get('/query', async (req, res) => {
   }
 
   for (const canticle of canticles) {
-    if (canticle.numPage === undefined) continue
+    if (canticle.page === undefined) continue
 
-    const numPage = Number(canticle.numPage)
+    const numPage = Number(canticle.page)
     if (numPage > limit + skip) break
 
     const canticleValid = numPage >= skip
@@ -62,7 +57,7 @@ app.get('/query', async (req, res) => {
 app.get('/:page', async (req, res) => {
   const numPage = req.params.page
 
-  const newCanticle = canticles.find(canticle => canticle.numPage === numPage)
+  const newCanticle = canticles.find(canticle => canticle.page === numPage)
 
   if (newCanticle === undefined) {
     res.send('Canto no encontrado')
@@ -72,10 +67,10 @@ app.get('/:page', async (req, res) => {
 })
 
 app.get('/stage/:stage', async (req, res) => {
-  const stage = req.params.stage
+  const stage = Number(req.params.stage)
 
-  if (stage in STAGE) {
-    const newCanticles = canticles.filter(canticle => STAGE[+stage] === canticle.stage)
+  if ([0, 1, 2, 3].includes(stage)) {
+    const newCanticles = canticles.filter(canticle => stage === canticle.stage)
     return res.send({ canticles: newCanticles, length: newCanticles.length })
   } else return res.send('Stage no encontrado')
 })

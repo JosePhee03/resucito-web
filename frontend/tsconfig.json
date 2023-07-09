@@ -1,12 +1,28 @@
 {
   "compilerOptions": {
+    "plugins": [
+      {
+        "name": "typescript-lit-html-plugin",
+        "tags": [
+          "html",
+          "template"
+        ]
+      }
+    ],
+
     "target": "ES2020",
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "module": "ESNext",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
-    "baseUrl": "./frontend",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@models/*": ["./src/models/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@components/*": ["./src/components/*"],
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -22,4 +38,5 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": ["src"],
+  "references": [{ "path": "tsconfig.node.json" }]
 }

@@ -54,15 +54,21 @@ importers:
         specifier: 1.63.6
         version: 1.63.6
     devDependencies:
+      '@types/node':
+        specifier: 20.3.1
+        version: 20.3.1
       ts-standard:
         specifier: 12.0.2
         version: 12.0.2(typescript@5.0.2)
       typescript:
         specifier: 5.0.2
         version: 5.0.2
+      typescript-lit-html-plugin:
+        specifier: 0.9.0
+        version: 0.9.0
       vite:
         specifier: 4.3.9
-        version: 4.3.9(sass@1.63.6)
+        version: 4.3.9(@types/node@20.3.1)(sass@1.63.6)
 
 packages:
 
@@ -76,6 +82,10 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
+    dev: true
+
+  /@emmetio/extract-abbreviation@0.1.6:
+    resolution: {integrity: sha512-Ce3xE2JvTSEbASFbRbA1gAIcMcZWdS2yUYRaQbeM0nbOzaZrUYfa3ePtcriYRZOZmr+CkKA+zbjhvTpIOAYVcw==}
     dev: true
 
   /@esbuild/android-arm64@0.17.19:
@@ -2098,6 +2108,10 @@ packages:
       minimist: 1.2.8
     dev: true
 
+  /jsonc-parser@1.0.3:
+    resolution: {integrity: sha512-hk/69oAeaIzchq/v3lS50PXuzn5O2ynldopMC+SWBql7J2WtdptfB9dy8Y7+Og5rPkTCpn83zTiO8FMcqlXJ/g==}
+    dev: true
+
   /jsx-ast-utils@3.3.4:
     resolution: {integrity: sha512-fX2TVdCViod6HwKEtSWGHs57oFhVfCMwieb9PuRDgjDPh5XeqJiHFFFJCHxU5cnTc3Bu/GRL+kPiFmw8XWOfKw==}
     engines: {node: '>=4.0'}
@@ -3166,6 +3180,29 @@ packages:
       is-typed-array: 1.1.10
     dev: true
 
+  /typescript-lit-html-plugin@0.9.0:
+    resolution: {integrity: sha512-Ux2I1sPpt2akNbRZiBAND9oA8XNE2BuVmDwsb7rZshJ9T8/Na2rICE5Tnuj9dPHdFUATdOGjVEagn1/v8T4gCQ==}
+    dependencies:
+      typescript-styled-plugin: 0.13.0
+      typescript-template-language-service-decorator: 2.3.2
+      vscode-html-languageservice: 2.1.12
+      vscode-languageserver-types: 3.17.3
+    dev: true
+
+  /typescript-styled-plugin@0.13.0:
+    resolution: {integrity: sha512-GGMzv/JAd4S8mvWgHZslvW2G1HHrdurrp93oSR4h85SM8e5at7+KCqHsZICiTaL+iN25YGkJqoaZe4XklA76rg==}
+    deprecated: Deprecated in favor of https://github.com/styled-components/typescript-styled-plugin
+    dependencies:
+      typescript-template-language-service-decorator: 2.3.2
+      vscode-css-languageservice: 3.0.13
+      vscode-emmet-helper: 1.2.11
+      vscode-languageserver-types: 3.17.3
+    dev: true
+
+  /typescript-template-language-service-decorator@2.3.2:
+    resolution: {integrity: sha512-hN0zNkr5luPCeXTlXKxsfBPlkAzx86ZRM1vPdL7DbEqqWoeXSxplACy98NpKpLmXsdq7iePUzAXloCAoPKBV6A==}
+    dev: true
+
   /typescript@5.0.2:
     resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
     engines: {node: '>=12.20'}
@@ -3212,7 +3249,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: false
 
-  /vite@4.3.9(sass@1.63.6):
+  /vite@4.3.9(@types/node@20.3.1)(sass@1.63.6):
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3237,12 +3274,49 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 20.3.1
       esbuild: 0.17.19
       postcss: 8.4.24
       rollup: 3.26.0
       sass: 1.63.6
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
+
+  /vscode-css-languageservice@3.0.13:
+    resolution: {integrity: sha512-RWkO/c/A7iXhHEy3OuEqkCqavDjpD4NF2Ca8vjai+ZtEYNeHrm1ybTnBYLP4Ft1uXvvaaVtYA9HrDjD6+CUONg==}
+    dependencies:
+      vscode-languageserver-types: 3.17.3
+      vscode-nls: 4.1.2
+    dev: true
+
+  /vscode-emmet-helper@1.2.11:
+    resolution: {integrity: sha512-ms6/Z9TfNbjXS8r/KgbGxrNrFlu4RcIfVJxTZ2yFi0K4gn+Ka9X1+8cXvb5+5IOBGUrOsPjR0BuefdDkG+CKbQ==}
+    deprecated: This package has been renamed to @vscode/emmet-helper, please update to the new name
+    dependencies:
+      '@emmetio/extract-abbreviation': 0.1.6
+      jsonc-parser: 1.0.3
+      vscode-languageserver-types: 3.17.3
+    dev: true
+
+  /vscode-html-languageservice@2.1.12:
+    resolution: {integrity: sha512-mIb5VMXM5jI97HzCk2eadI1K//rCEZXte0wBqA7PGXsyJH4KTyJUaYk9MR+mbfpUl2vMi3HZw9GUOLGYLc6l5w==}
+    dependencies:
+      vscode-languageserver-types: 3.17.3
+      vscode-nls: 4.1.2
+      vscode-uri: 1.0.8
+    dev: true
+
+  /vscode-languageserver-types@3.17.3:
+    resolution: {integrity: sha512-SYU4z1dL0PyIMd4Vj8YOqFvHu7Hz/enbWtpfnVbJHU4Nd1YNYx8u0ennumc6h48GQNeOLxmwySmnADouT/AuZA==}
+    dev: true
+
+  /vscode-nls@4.1.2:
+    resolution: {integrity: sha512-7bOHxPsfyuCqmP+hZXscLhiHwe7CSuFE4hyhbs22xPIhQ4jv99FcR4eBzfYYVLP356HNFpdvz63FFb/xw6T4Iw==}
+    dev: true
+
+  /vscode-uri@1.0.8:
+    resolution: {integrity: sha512-obtSWTlbJ+a+TFRYGaUumtVwb+InIUVI0Lu0VBUAPmj2cU5JutEXg3xUE0c2J5Tcy7h2DEKVJBFi+Y9ZSFzzPQ==}
     dev: true
 
   /webidl-conversions@7.0.0:
