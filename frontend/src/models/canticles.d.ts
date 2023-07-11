@@ -1,14 +1,22 @@
 export interface CanticlesAPIResponse {
   canticles: Canticle[]
   total: number
+  skip: number
+  limit: number
 }
+
+export interface CanticleResponse {
+  canticles: Canticle
+}
+
+type STAGE = 0 | 1 | 2 | 3
 
 export interface Canticle {
   lyric: Lyric[]
-  numPage: string
-  title?: string
-  subTitle?: string
-  stage: string
+  page: string
+  title: string
+  subTitle: string
+  stage: STAGE
 }
 
 export interface Lyric {

@@ -1,5 +1,5 @@
-@import 'styles/reset';
-@import 'styles/fonts';
+@use 'styles/reset';
+@use 'styles/fonts';
 
 :root {
   --font: 'Inter';
@@ -13,11 +13,25 @@
   --green: #C3F2C2;
   --blue: #81D4FA;
   
-  --text-xl: 1.5em;
-  --text-lg: 1.125em;
-  --text-md: 1em;
-  --text-sm: 0.875em;
-  --text-xs: 0.75em;
+  /* Font size */
+  --text-2xl: 2rem;
+  --text-xl: 1.5rem;
+  --text-lg: 1.125rem;
+  --text-md: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+
+  /* svg */
+  --stroke-width-xl: 3;
+  --stroke-width-lg: 2;
+  --stroke-round: round;
+
+  /* gaps */
+  --spacing-xl: 2rem;
+  --spacing-lg: 1.5rem;
+  --spacing-md: 1rem;
+  --spacing-sm: .5rem;
+  --spacing-xd: .25rem
 
 }
 

@@ -2,6 +2,13 @@ import { LitElement, css, html } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 import { Canticle } from '@models/canticles'
 
+const STAGE_TAG = {
+  0: 'precatecumenado',
+  1: 'liturgia',
+  2: 'catecumenado',
+  3: 'eleccíon'
+}
+
 @customElement('c-canticle')
 export class CCanticle extends LitElement {
   @property({ attribute: 'canticle', type: Object }) canticle: Canticle | null = null
@@ -11,13 +18,17 @@ export class CCanticle extends LitElement {
   static styles = css`
     :host {
       background: #ccc;
-      font-size: 42px;
+      font-size: 18px;
     }
 
     pre {
       display: flex;
       flex-direction: column;
       margin: 0;
+    }
+
+    .chorus:last-of-type >  {
+      background: red
     }
 
     .num-page {
@@ -76,8 +87,14 @@ export class CCanticle extends LitElement {
     }
 
     @media (min-width: 768px) {
-      html {
-        background-color: red;
+      :host {
+        font-size: 24px
+      }
+    }
+
+    @media (min-width: 1200px) {
+      :host {
+        font-size: 28px
       }
     }
   `
@@ -93,11 +110,11 @@ export class CCanticle extends LitElement {
   get templeteCanticle () {
     if (this.canticle == null) return html`<h1>Canto Vacio</h1>`
 
-    const { lyric, numPage, stage, subTitle, title } = this.canticle
+    const { lyric, page, stage, subTitle, title } = this.canticle
     return html`
       <pre>
-        <b class="tag">${stage}</b>
-        <b class="num-page">${numPage}</b>
+        <b class="tag">${STAGE_TAG[stage]}</b>
+        <b class="num-page">${page}</b>
         <b class="title">${title}</b>
         <b class="subtitle">${subTitle}</b>
         ${lyric.map(({ content, type }) => {
