@@ -7,11 +7,12 @@
   --text-color: #000000;
   --primary-color: #FFFFFF;
   --secondary-color: #FF0000;
-  --neutral-light-color: #CCCCCC;
+  --neutral-light-color: #DDDDDD;
   --neutral-dark-color: #333;
   --yellow: #FDEC54;
   --green: #C3F2C2;
   --blue: #81D4FA;
+  --gray: #CCCCCC;
   
   /* Font size */
   --text-2xl: 2rem;
@@ -31,7 +32,15 @@
   --spacing-lg: 1.5rem;
   --spacing-md: 1rem;
   --spacing-sm: .5rem;
-  --spacing-xd: .25rem
+  --spacing-xs: .25rem;
+  --spacing-mini: 0.125rem;
+
+  /* rounded */
+  --rounded-xs: 0.25rem;
+  --rounded-mini: 0.125rem;
+
+  /* hover */
+  --hover-primary: #00000005;
 
 }
 

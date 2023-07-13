@@ -33,7 +33,7 @@ export class CSearch extends LitElement {
 
       form {
         display: flex;
-        width: 360px;
+        width: 460px;
         justify-content: space-between;
         align-items: center;
         position: relative

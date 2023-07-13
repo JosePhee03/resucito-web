@@ -10,13 +10,14 @@ export interface CanticleResponse {
 }
 
 type STAGE = 0 | 1 | 2 | 3
+export type Stage = 'precatechumenate' | 'catechumenate' | 'liturgy' | 'election'
 
 export interface Canticle {
   lyric: Lyric[]
   page: string
   title: string
   subTitle: string
-  stage: STAGE
+  stage: Stage
 }
 
 export interface Lyric {

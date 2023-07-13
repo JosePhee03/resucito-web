@@ -1,11 +1,15 @@
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
+type IconsID = 'menu' | 'search' | 'exit' | 'moon' | 'chevron-down' | 'chevron-up'
+type IconsSize = 'sm' | 'md' | 'lg' | 'xl'
+type IconColor = 'text-color' | 'currentColor'
+
 @customElement('u-icon')
 export class UIcon extends LitElement {
-  @property({ type: String }) id: 'menu' | 'search' | 'exit' | 'moon' = 'menu'
-  @property({ type: String }) size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md'
-  @property({ type: String }) color: 'text-color' | 'currentColor' = 'currentColor'
+  @property({ type: String }) id: IconsID = 'menu'
+  @property({ type: String }) size: IconsSize = 'md'
+  @property({ type: String }) color: IconColor = 'currentColor'
 
   static styles = [
     css`
@@ -41,8 +45,7 @@ export class UIcon extends LitElement {
 
   render () {
     const SIZE_ICON = {
-      xs: '1rem',
-      sm: '1rem',
+      sm: '0.75rem',
       md: '1rem',
       lg: '1.5rem',
       xl: '2rem'

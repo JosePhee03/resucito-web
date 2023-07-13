@@ -27,7 +27,7 @@ export class UButton extends LitElement {
       }
 
       button:hover {
-        background:  color-mix(in hwb, var(--text-color), var(--primary-color) 95%);
+        background:  var(--hover-primary);
         cursor: pointer;
       }
 

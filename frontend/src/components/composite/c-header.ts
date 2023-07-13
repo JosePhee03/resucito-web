@@ -28,7 +28,7 @@ export class CHeader extends LitElement {
         font-family: var(--font);
         font-style: normal;
         font-weight: 700;
-        line-height: 0;
+        line-height: normal;
         font-size: var(--text-2xl);
       }
 
