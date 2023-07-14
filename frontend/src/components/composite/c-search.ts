@@ -29,14 +29,15 @@ export class CSearch extends LitElement {
       :host {
         display: block;
         line-height: 0;
+        width: 100%;
       }
 
       form {
         display: flex;
-        width: 460px;
+        width: 100%;
         justify-content: space-between;
         align-items: center;
-        position: relative
+        position: relative;
       }
 
       .input-search {
@@ -69,7 +70,6 @@ export class CSearch extends LitElement {
         padding: .5rem;
         right: 0;
       }
-
     `
   ]
 

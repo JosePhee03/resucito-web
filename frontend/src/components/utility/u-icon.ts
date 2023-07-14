@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-type IconsID = 'menu' | 'search' | 'exit' | 'moon' | 'chevron-down' | 'chevron-up'
+type IconsID = 'menu' | 'search' | 'exit' | 'moon' | 'chevron-down' | 'chevron-up' | 'home' | 'settings' | 'list-music'
 type IconsSize = 'sm' | 'md' | 'lg' | 'xl'
 type IconColor = 'text-color' | 'currentColor'
 

@@ -155,21 +155,29 @@ export class LayoutHome extends LitElement {
         place-items: center;
       }
       
+      * { box-sizing: border-box; }
+
       main {
         display: flex;
+        width: 100%;
         flex-direction: column;
         align-items: center;
-        min-width: 460px;
-
         margin-bottom: 4rem;
-        
+        padding: var(--spacing-sm)
       }
-
+      
       section {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: var(--spacing-sm);
+      }
+
+      @media (min-width: 768px) {
+        main {
+          max-width: 460px;
+          padding: 0;
+        }
       }
     `
   ]

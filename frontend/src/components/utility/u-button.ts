@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit'
+import { LitElement, html, css, PropertyValues } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 @customElement('u-button')
@@ -19,7 +19,7 @@ export class UButton extends LitElement {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: .4rem;
+        padding: var(--spacing-sm);
       }
 
       .full {
@@ -36,7 +36,7 @@ export class UButton extends LitElement {
 
   render () {
     return html`
-      <button  type="${this.type}" aria-label="${this.ariaLabel}" class="${this.rounded}">
+      <button type="${this.type}" aria-label="${this.ariaLabel}" class="${this.rounded}">
         <slot></slot>
       </button>
     `
