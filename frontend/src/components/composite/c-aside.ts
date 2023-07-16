@@ -9,8 +9,7 @@ export class CAside extends LitElement {
   static styles = [
     css`
       :host {
-        position: relative;
-        z-index: 30;
+        z-index: 21;
       }
 
       * {
@@ -18,8 +17,7 @@ export class CAside extends LitElement {
       }
 
       aside {
-        position: sticky;
-        top: 0;
+        position: fixed;
         width: 300px;
         height: 100vh;
         background: var(--primary-color);
@@ -41,6 +39,7 @@ export class CAside extends LitElement {
       }
 
       a {
+        text-decoration: none;
         display: flex;
         align-items: center;
         color: var(--text-color, #000);

@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js'
 
 @customElement('u-list-item-icon')
 export class UListItemIcon extends LitElement {
-  @property({ type: String }) color: string | 'default' | Stage = 'default'
+  @property({ type: String }) color: Stage | 'default' = 'default'
   @property({ type: String }) text: string = ''
 
   static styles = [
