@@ -2,9 +2,9 @@ import { Stage } from '@/models/canticles'
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-@customElement('u-list-item-icon')
-export class UListItemIcon extends LitElement {
-  @property({ type: String }) color: Stage | 'default' = 'default'
+@customElement('c-list-item-icon')
+export class CListItemIcon extends LitElement {
+  @property({ type: String }) color: Stage | 'default' | string = 'default'
   @property({ type: String }) text: string = ''
 
   static styles = [

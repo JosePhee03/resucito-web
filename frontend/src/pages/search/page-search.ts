@@ -3,8 +3,10 @@ import { getAllCanticles } from '@/services/getAllCanticles'
 import { LitElement, html, css } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
 
-@customElement('layout-search')
-export class LayoutSearch extends LitElement {
+import '@components'
+
+@customElement('page-search')
+export class PageSearch extends LitElement {
   @state() canticles: Canticle[] = []
   @state() isLoading: boolean = true
   @state() isError: boolean = false
@@ -45,7 +47,7 @@ export class LayoutSearch extends LitElement {
           grid-row-gap: var(--spacing-xs);
         }
 
-        u-list-item-icon { 
+        c-list-item-icon { 
           grid-area: 1 / 1 / 3 / 2; 
           width: fit-content;
           height: fit-content;
@@ -105,7 +107,7 @@ export class LayoutSearch extends LitElement {
     return html`
       <a href="/canticle/${canticle.page}">
         <div class="canticle-cont">
-          <u-list-item-icon text="${canticle.page}" color="election"></u-list-item-icon>
+          <c-list-item-icon text="${canticle.page}" color="election"></c-list-item-icon>
           <h3>${canticle.title ?? 'not fount'}</h3>
           <small>${canticle.subTitle ?? 'notsd'}</small> 
         </div>

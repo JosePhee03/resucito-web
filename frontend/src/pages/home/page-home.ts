@@ -1,7 +1,8 @@
 import { LitElement, html, css } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-import '../composite/c-details'
+import '@components'
+import './components'
 
 interface Anchor {
   href: string
@@ -146,8 +147,8 @@ const ArrayListHome: Array<Details | Anchor> = [
 
 const lang = 'es'
 
-@customElement('layout-home')
-export class LayoutHome extends LitElement {
+@customElement('page-home')
+export class PageHome extends LitElement {
   static styles = [
     css`
       :host {
@@ -193,18 +194,18 @@ export class LayoutHome extends LitElement {
             <c-details sumary="${list.summary}">
               ${list.UnorderedList.map(item => {
                 return html`
-                <u-list-item href="${item.href}" >
-                  <u-list-item-icon slot="icon" color="${item.color}" text="${item.iconText}"></u-list-item-icon>
+                <c-list-item href="${item.href}" >
+                  <c-list-item-icon slot="icon" color="${item.color}" text="${item.iconText}"></c-list-item-icon>
                   <span slot="text">${item.text}</span>
-                </u-list-item>`
+                </c-list-item>`
               })}
             </c-details>`
           } else if ('href' in list) {
             return html`
-            <u-list-item href="${list.href}" >
-              <u-list-item-icon slot="icon" color="${list.color}" text="${list.iconText}"></u-list-item-icon>
+            <c-list-item href="${list.href}" >
+              <c-list-item-icon slot="icon" color="${list.color}" text="${list.iconText}"></c-list-item-icon>
               <span slot="text">${list.text}</span>
-            </u-list-item>`
+            </c-list-item>`
           } else {
             return html`<span>Error</span>`
           }

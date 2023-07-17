@@ -1,8 +1,8 @@
-import { LitElement, html, css, PropertyValues } from 'lit'
+import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-@customElement('u-button')
-export class UButton extends LitElement {
+@customElement('c-button')
+export class CButton extends LitElement {
   @property({ type: String }) rounded: 'full' = 'full'
   @property({ type: String }) ariaLabel: string = ''
   @property({ type: String }) type: 'submit' | 'button' | 'reset' | 'menu' = 'button'

@@ -5,8 +5,8 @@ type IconsID = 'menu' | 'search' | 'exit' | 'moon' | 'chevron-down' | 'chevron-u
 type IconsSize = 'sm' | 'md' | 'lg' | 'xl'
 type IconColor = 'text-color' | 'currentColor'
 
-@customElement('u-icon')
-export class UIcon extends LitElement {
+@customElement('c-icon')
+export class CIcon extends LitElement {
   @property({ type: String }) id: IconsID = 'menu'
   @property({ type: String }) size: IconsSize = 'md'
   @property({ type: String }) color: IconColor = 'currentColor'

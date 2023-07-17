@@ -1,8 +1,8 @@
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-@customElement('u-list-item')
-export class UListItem extends LitElement {
+@customElement('c-list-item')
+export class CListItem extends LitElement {
   @property({ type: String }) href: string = ''
 
   static styles = [

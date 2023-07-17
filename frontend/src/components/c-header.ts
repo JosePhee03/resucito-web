@@ -1,8 +1,5 @@
 import { LitElement, html, css } from 'lit'
 import { customElement } from 'lit/decorators.js'
-import '@components/utility/u-icon'
-import '@components/utility/u-button'
-import '@components/composite/c-search'
 import { CAside } from '.'
 
 @customElement('c-header')
@@ -106,21 +103,22 @@ export class CHeader extends LitElement {
     return html`
       <header>
         <div class="left">
-          <u-button @click="${this._handleClickMenu}">
-            <u-icon id="menu" size="xl"></u-icon>
-          </u-button>
+          <c-button @click="${this._handleClickMenu}">
+            <c-icon id="menu" size="xl"></c-icon>
+          </c-button>
           <a class="logo-text" href="/">Resucito</a>
         </div>
         <div class="center">
           <c-search></c-search>
         </div>
         <div class="right">
-          <u-button id="search-button">
-            <u-icon id="search" size="xl"></u-icon>
-          </u-button>
-          <u-button>
-            <u-icon id="moon" size="xl"></u-icon>
-          </u-button>
+          <a href="/search">
+            <c-button id="search-button">
+              <c-icon id="search" size="xl"></c-icon>
+            </c-button>
+          </a>
+            <c-icon id="moon" size="xl"></c-icon>
+          </c-button>
         </div>
       </header>
     `

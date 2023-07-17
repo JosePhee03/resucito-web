@@ -116,9 +116,9 @@ export class CAside extends LitElement {
         class="${classMap({ close: this.open === null })}"
       >
         <ul role="navigation">
-          <li role="menuitem"><a href="/" aria-label="Ir al página principal" class="selected"><u-icon id="home" size="xl"></u-icon><span>Inicio</span></a></li>
-          <li role="menuitem"><a href="/settings" aria-label="Ir al página de configuraciones"><u-icon id="settings" size="xl"></u-icon><span>Preferencias</span></a></li>
-          <li role="menuitem"><a href="/list" aria-label="Ir al página de listas"><u-icon id="list-music" size="xl"></u-icon><span>Listas</span></a></li>
+          <li role="menuitem"><a href="/" aria-label="Ir al página principal" class="selected"><c-icon id="home" size="xl"></c-icon><span>Inicio</span></a></li>
+          <li role="menuitem"><a href="/settings" aria-label="Ir al página de configuraciones"><c-icon id="settings" size="xl"></c-icon><span>Preferencias</span></a></li>
+          <li role="menuitem"><a href="/list" aria-label="Ir al página de listas"><c-icon id="list-music" size="xl"></c-icon><span>Listas</span></a></li>
         </ul>
       </aside>
     `
