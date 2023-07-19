@@ -1,0 +1,2421 @@
+[
+  {
+    "lyric": [
+      [
+        {
+          "type": "chord",
+          "content": "La–                              La7          "
+        },
+        {
+          "type": "verse",
+          "content": "A la víctima pascual"
+        },
+        {
+          "type": "chord",
+          "content": "                                  "
+        },
+        {
+          "type": "verse",
+          "content": "ofrecemos hoy"
+        },
+        {
+          "type": "chord",
+          "content": "          Re– 9   "
+        },
+        {
+          "type": "verse",
+          "content": "el sacrificio de alabanza."
+        },
+        {
+          "type": "chord",
+          "content": "Fa7 aum                                         Mi "
+        },
+        {
+          "type": "verse",
+          "content": "El cordero ha redimido el rebaño,"
+        },
+        {
+          "type": "chord",
+          "content": "Fa7 aum         Fa         "
+        },
+        {
+          "type": "verse",
+          "content": "el inocente ha reconciliado"
+        },
+        {
+          "type": "chord",
+          "content": "                                Mi "
+        },
+        {
+          "type": "verse",
+          "content": "los pecadores al Padre."
+        },
+        {
+          "type": "chord",
+          "content": "La7                 "
+        },
+        {
+          "type": "verse",
+          "content": "Muerte y vida se han enfrentado"
+        },
+        {
+          "type": "chord",
+          "content": "                               Re– 9 "
+        },
+        {
+          "type": "verse",
+          "content": "en un prodigioso duelo"
+        },
+        {
+          "type": "chord",
+          "content": "Fa7                                       Mi                    "
+        },
+        {
+          "type": "verse",
+          "content": "el autor de la Vida estaba muerto,"
+        },
+        {
+          "type": "chord",
+          "content": "              Fa7                             Mi   "
+        },
+        {
+          "type": "verse",
+          "content": "mas ahora está vivo y triunfa."
+        },
+        {
+          "type": "chord",
+          "content": "La7 "
+        },
+        {
+          "type": "verse",
+          "content": "Dinos tú, María:"
+        },
+        {
+          "type": "chord",
+          "content": " "
+        },
+        {
+          "type": "verse",
+          "content": "¿qué has visto en el camino?"
+        },
+        {
+          "type": "chord",
+          "content": "Fa7                             Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "«La tumba de Cristo vacía,"
+        },
+        {
+          "type": "chord",
+          "content": "Fa7                        Mi "
+        },
+        {
+          "type": "verse",
+          "content": "la Gloria del Señor y vivo Cristo,"
+        },
+        {
+          "type": "chord",
+          "content": "Fa                                  Mi "
+        },
+        {
+          "type": "verse",
+          "content": "los ángeles, las vendas y el sudario.»"
+        }
+      ],
+      [
+        {
+          "type": "chord",
+          "content": "                          Fa        "
+        },
+        {
+          "type": "chorus",
+          "content": "PORQUE CRISTO, MI ESPERANZA,"
+        },
+        {
+          "type": "chord",
+          "content": "                            Mi "
+        },
+        {
+          "type": "chorus",
+          "content": "¡HA RESUCITADO!"
+        },
+        {
+          "type": "chord",
+          "content": "Fa                                                      Mi     "
+        },
+        {
+          "type": "chorus",
+          "content": "Y NOS PRECEDE EN GALILEA,"
+        },
+        {
+          "type": "chord",
+          "content": "Fa                                                      Mi "
+        },
+        {
+          "type": "chorus",
+          "content": "Y NOS PRECEDE EN GALILEA."
+        },
+        {
+          "type": "chord",
+          "content": "Re–                    Mi                "
+        },
+        {
+          "type": "chorus",
+          "content": "SÍ QUE ES CIERTO,"
+        },
+        {
+          "type": "chord",
+          "content": "Fa                                         Mi "
+        },
+        {
+          "type": "chorus",
+          "content": "CRISTO HA RESUCITADO."
+        },
+        {
+          "type": "chord",
+          "content": "Re–                    Mi            "
+        },
+        {
+          "type": "chorus",
+          "content": "SÍ QUE ES CIERTO,"
+        },
+        {
+          "type": "chord",
+          "content": "Fa                                         Mi "
+        },
+        {
+          "type": "chorus",
+          "content": "CRISTO HA RESUCITADO."
+        },
+        {
+          "type": "chord",
+          "content": "Fa                                                      Mi      "
+        },
+        {
+          "type": "chorus",
+          "content": "Y NOS PRECEDE EN GALILEA,"
+        },
+        {
+          "type": "chord",
+          "content": "Fa                                                      Mi "
+        },
+        {
+          "type": "chorus",
+          "content": "Y NOS PRECEDE EN GALILEA."
+        }
+      ],
+      [
+        {
+          "type": "chord",
+          "content": "Fa                                                Mi "
+        },
+        {
+          "type": "verse",
+          "content": "Tú, Rey victorioso, danos tú la salvación."
+        }
+      ]
+    ],
+    "stage": "precatechumenate",
+    "page": 21,
+    "title": "A LA VÍCTIMA PASCUAL",
+    "subTitle": "Secuencia de Pascua",
+    "capo": 5,
+    "tone": "La-",
+    "tags": ["pentecost", "entrance", "communion", "easter"]
+  },
+  {
+    "lyric": [[
+        {
+          "type": "chord",
+          "content": "La–                                          Re– "
+        },
+        {
+          "type": "verse",
+          "content": "Hermanos, a nadie demos ocasión de tropiezo,"
+        },
+        {
+          "type": "chord",
+          "content": "          Mi                        La– "
+        },
+        {
+          "type": "verse",
+          "content": "hermanos, vivamos aceptando las tribulaciones,"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                  Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "necesidades, angustias y fatigas;"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                      Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "viviendo en pureza, paciencia y bondad;"
+        },
+        {
+          "type": "chord",
+          "content": "                          Fa                                              Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "en el Espíritu Santo, y en el poder de Dios;"
+        },
+        {
+          "type": "chord",
+          "content": "                                               Fa        "
+        },
+        {
+          "type": "verse",
+          "content": "con las armas de la justicia:"
+        },
+        {
+          "type": "chord",
+          "content": "                                                                 Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "las de la derecha y las de la izquierda."
+        }
+      ],
+      [
+        {
+          "type": "chord",
+          "content": "La– "
+        },
+        {
+          "type": "chorus",
+          "content": "HERMANOS, A NADIE DEMOS"
+        },
+        {
+          "type": "chord",
+          "content": "                                          Re– "
+        },
+        {
+          "type": "chorus",
+          "content": "OCASIÓN DE TROPIEZO,"
+        },
+        {
+          "type": "chord",
+          "content": "         Mi                                                          "
+        },
+        {
+          "type": "chorus",
+          "content": "HERMANOS, VIVAMOS ACEPTANDO"
+        },
+        {
+          "type": "chord",
+          "content": "                                La– "
+        },
+        {
+          "type": "chorus",
+          "content": "LAS TRIBULACIONES,"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                      Mi    "
+        },
+        {
+          "type": "chorus",
+          "content": "NECESIDADES, ANGUSTIAS Y FATIGAS."
+        }
+      ],
+      [
+        {
+          "type": "chord",
+          "content": "Re–                                               Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "En calumnias y en buena fama,"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                           Mi                   Re– "
+        },
+        {
+          "type": "verse",
+          "content": "en gloria e ignominia; como pobres,"
+        },
+        {
+          "type": "chord",
+          "content": "                                                       Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "aunque enriqueciendo a muchos;"
+        },
+        {
+          "type": "chord",
+          "content": "                                      Fa  "
+        },
+        {
+          "type": "verse",
+          "content": "como quienes nada tienen,"
+        },
+        {
+          "type": "chord",
+          "content": "                                              Mi "
+        },
+        {
+          "type": "verse",
+          "content": "aunque lo poseemos todo."
+        },
+        {
+          "type": "chord",
+          "content": "La– "
+        },
+        {
+          "type": "verse",
+          "content": "HERMANOS, A NADIE DEMOS …"
+        },
+        {
+          "type": "chord",
+          "content": "La7                                                                  Re– "
+        },
+        {
+          "type": "verse",
+          "content": "¡Hermanos!, os hemos hablado con franqueza;"
+        },
+        {
+          "type": "chord",
+          "content": "                                                            Mi      "
+        },
+        {
+          "type": "verse",
+          "content": "os hemos hablado con la verdad."
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                 Mi "
+        },
+        {
+          "type": "verse",
+          "content": "¡No unciros al yugo desigual con los paganos!"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                    Mi      "
+        },
+        {
+          "type": "verse",
+          "content": "¿Qué participación hay entre el fiel y el infiel?"
+        },
+        {
+          "type": "chord",
+          "content": "                                                                       Fa    "
+        },
+        {
+          "type": "verse",
+          "content": "¿Qué unión entre el santuario de Dios"
+        },
+        {
+          "type": "chord",
+          "content": "                                         Mi   "
+        },
+        {
+          "type": "verse",
+          "content": "y el santuario de los ídolos?"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                          Mi  "
+        },
+        {
+          "type": "verse",
+          "content": "Porque somos el santuario de Dios."
+        },
+        {
+          "type": "chord",
+          "content": "La– "
+        }
+      ],
+      [
+        {
+          "type": "chorus",
+          "content": "HERMANOS, A NADIE DEMOS …"
+        },
+        {
+          "type": "chord",
+          "content": "La7                                                           Re–   "
+        },
+        {
+          "type": "verse",
+          "content": "Tengo plena confianza en el hablaros;"
+        },
+        {
+          "type": "chord",
+          "content": "                                                        Mi      "
+        },
+        {
+          "type": "verse",
+          "content": "porque estoy orgulloso de vosotros."
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                                          Mi      "
+        },
+        {
+          "type": "verse",
+          "content": "¡No unciros al yugo desigual con los paganos!"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                                              Mi      "
+        },
+        {
+          "type": "verse",
+          "content": "¿Qué participación hay entre el fiel y el infiel?"
+        },
+        {
+          "type": "chord",
+          "content": "                                                                       Fa    "
+        },
+        {
+          "type": "verse",
+          "content": "¿Qué unión entre el santuario de Dios"
+        },
+        {
+          "type": "chord",
+          "content": "                                         Mi   "
+        },
+        {
+          "type": "verse",
+          "content": "y el santuario de los ídolos?"
+        },
+        {
+          "type": "chord",
+          "content": "La– "
+        },
+        {
+          "type": "verse",
+          "content": "HERMANOS, A NADIE DEMOS …"
+        },
+        {
+          "type": "chord",
+          "content": "Re–                                                  Mi    "
+        },
+        {
+          "type": "verse",
+          "content": "En pureza, paciencia y bondad;"
+        },
+        {
+          "type": "chord",
+          "content": "             Fa                                             Mi     "
+        },
+        {
+          "type": "verse",
+          "content": "en el Espíritu Santo, y en el poder de Dios."
+        }
+      ]
+    ],
+    "stage": "precatechumenate",
+    "page": 22,
+    "title": "A NADIE DEMOS OCASIÓN DE TROPIEZO",
+    "subTitle": "2ª Corintios 6,3ss",
+    "capo": 0,
+    "tone": "La-",
+    "tags": ["psalm"]
+  },
+  {
+    "lyric": [
+      [
+      {
+        "type": "chord",
+        "content": "Re–         La7   "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI LEVANTO MIS OJOS,"
+      },
+      {
+        "type": "chord",
+        "content": "    Sol–                           La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI QUE HABITAS EN EL CIELO."
+      },
+      {
+        "type": "chord",
+        "content": " "
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Re–                        La7 "
+      },
+      {
+        "type": "verse",
+        "content": "Como los ojos de los siervos están fijos en las manos de sus señores."
+      },
+      {
+        "type": "chord",
+        "content": "Sol–                                   La7 "
+      },
+      {
+        "type": "verse",
+        "content": "Como los ojos de la esclava en las manos de su señora,"
+      },
+      {
+        "type": "chord",
+        "content": "Sib7                La7             "
+      },
+      {
+        "type": "verse",
+        "content": "así nuestros ojos miran al Señor,"
+      },
+      {
+        "type": "chord",
+        "content": "         Sib7                      La7            Sib7        La7        "
+      },
+      {
+        "type": "verse",
+        "content": "esperando que tenga piedad, esperando que tenga piedad."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "    Re–             La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "¡PIEDAD DE NOSOTROS, SEÑOR!"
+      },
+      {
+        "type": "chord",
+        "content": "    Sib7                                            La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "¡PIEDAD DE NOSOTROS, SEÑOR!"
+      },
+      {
+        "type": "chord",
+        "content": "    Re–                                       La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "¡QUE DEMASIADO SE HAN BURLADO DE NOSOTROS,"
+      },
+      {
+        "type": "chord",
+        "content": "                                                 Sib7                                             La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "QUE NUESTRA ALMA ESTÁ SACIADA DE DESPRECIOS!"
+      },
+      {
+        "type": "chord",
+        "content": "      Re–                                  La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "¡DE LAS BURLAS DE LOS SATISFECHOS,"
+      },
+      {
+        "type": "chord",
+        "content": "                      Sib7           La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "DEL DESPRECIO DE LOS SOBERBIOS!"
+      },
+      {
+        "type": "chord",
+        "content": "    Re–             La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "¡PIEDAD DE NOSOTROS, SEÑOR!"
+      },
+      {
+        "type": "chord",
+        "content": "    Sib7                                            La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "¡PIEDAD DE NOSOTROS, SEÑOR!"
+      },
+      {
+        "type": "chord",
+        "content": "Re–         La7   "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI LEVANTO MIS OJOS …"
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 23,
+    "title": "A TI LEVANTO MIS OJOS",
+    "subTitle": "Salmo 123 (122)",
+    "capo": 0,
+    "tags": ["psalm", "lent"],
+    "tone": "Re-"
+  },
+  {
+    "lyric": [
+      [
+      {
+        "type": "chord",
+        "content": "La–                   Re– "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, SEÑOR, EN MI CLAMOR IMPLORO."
+      },
+      {
+        "type": "chord",
+        "content": "                                                               La– "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, SEÑOR, EN MI CLAMOR SUPLICO."
+      },
+      {
+        "type": "chord",
+        "content": "Mi7 "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI DERRAMO MI LAMENTO,"
+      },
+      {
+        "type": "chord",
+        "content": "Fa        Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI MI ANGUSTIA EXPONGO."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Re–     "
+      },
+      {
+        "type": "verse",
+        "content": "Siento que el espíritu en mí se apaga;"
+      },
+      {
+        "type": "chord",
+        "content": "                                     Mi7 "
+      },
+      {
+        "type": "verse",
+        "content": "mas tú conoces mi sendero."
+      },
+      {
+        "type": "chord",
+        "content": "La–        Re–    "
+      },
+      {
+        "type": "verse",
+        "content": "Mira, Señor, que en el camino,"
+      },
+      {
+        "type": "chord",
+        "content": "                                                   La– "
+      },
+      {
+        "type": "verse",
+        "content": "mira, Señor, que me han tendido un lazo."
+      },
+      {
+        "type": "chord",
+        "content": "Mi                              Mi7 "
+      },
+      {
+        "type": "verse",
+        "content": "Mira, Señor, que a la derecha no hay ninguno,"
+      },
+      {
+        "type": "chord",
+        "content": "        Fa          Mi "
+      },
+      {
+        "type": "verse",
+        "content": "ninguno que me conozca."
+      },
+      {
+        "type": "chord",
+        "content": "Re–                          "
+      },
+      {
+        "type": "verse",
+        "content": "Huye de mí todo consuelo,"
+      },
+      {
+        "type": "chord",
+        "content": "                          Fa                   Mi7 "
+      },
+      {
+        "type": "verse",
+        "content": "que no hay nadie que se cuide de mi alma."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Fa                            Sol   "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, YO CLAMO SEÑOR;"
+      },
+      {
+        "type": "chord",
+        "content": "                                                                 Mi7 "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, YO DIGO: ¡TÚ SOLO ERES MI REFUGIO,"
+      },
+      {
+        "type": "chord",
+        "content": "Fa                        "
+      },
+      {
+        "type": "chorus",
+        "content": "TÚ ERES MI PORCIÓN EN ESTA TIERRA,"
+      },
+      {
+        "type": "chord",
+        "content": "                                       Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "MI ÚNICA FELICIDAD!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Re–           Mi               "
+      },
+      {
+        "type": "verse",
+        "content": "Escúchame, Señor, que estoy llorando,"
+      },
+      {
+        "type": "chord",
+        "content": "Fa                             Mi "
+      },
+      {
+        "type": "verse",
+        "content": "estoy tan deprimido."
+      },
+      {
+        "type": "chord",
+        "content": "Fa                          "
+      },
+      {
+        "type": "verse",
+        "content": "¡Líbrame de estos enemigos"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                                    Mi   "
+      },
+      {
+        "type": "verse",
+        "content": "que son más fuertes que yo!"
+      },
+      {
+        "type": "chord",
+        "content": "Fa                    "
+      },
+      {
+        "type": "verse",
+        "content": "¡Saca mi alma de esta cárcel,"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                 Mi "
+      },
+      {
+        "type": "verse",
+        "content": "y yo daré gracias a tu nombre!"
+      },
+      {
+        "type": "chord",
+        "content": "Re–                                "
+      },
+      {
+        "type": "verse",
+        "content": "En torno a mí los santos harán corro,"
+      },
+      {
+        "type": "chord",
+        "content": "Fa                                               Mi "
+      },
+      {
+        "type": "verse",
+        "content": "me felicitarán por tu favor hacia mí."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La–              "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, SEÑOR, EN MI CLAMOR …"
+      },
+      {
+        "type": "chord",
+        "content": "Fa                            Sol   "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, YO CLAMO SEÑOR …"
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 24,
+    "title": "A ti, Señor, en mi clamor imploro",
+    "subTitle": "Salmo 142 (141)",
+    "capo": 2,
+    "tone": "La-",
+    "tags": ["psalm", "lent"]
+  },
+  {
+    "lyric": [[
+      {
+        "type": "chord",
+        "content": "La–                           Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, SEÑOR, LEVANTO MI ALMA,"
+      },
+      {
+        "type": "chord",
+        "content": "          Re– Fa            Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, OH DIOS MÍO."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La–              Mi                     "
+      },
+      {
+        "type": "verse",
+        "content": "En ti confío, Señor,"
+      },
+      {
+        "type": "chord",
+        "content": "                                           Re– Fa        Mi "
+      },
+      {
+        "type": "verse",
+        "content": "¡no triunfen sobre mí mis enemigos!"
+      },
+      {
+        "type": "chord",
+        "content": "La–                       Mi            "
+      },
+      {
+        "type": "verse",
+        "content": "Muéstrame, Señor, tu camino,"
+      },
+      {
+        "type": "chord",
+        "content": "                                    Re– Fa     Mi "
+      },
+      {
+        "type": "verse",
+        "content": "enséñame, Señor, tu sendero."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La–                           Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, SEÑOR, LEVANTO MI ALMA ..."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La–               Mi "
+      },
+      {
+        "type": "verse",
+        "content": "Acuérdate, Señor, de tu ternura,"
+      },
+      {
+        "type": "chord",
+        "content": "                Re– Fa               Mi "
+      },
+      {
+        "type": "verse",
+        "content": "de tu inmensa compasión, que son de siempre."
+      },
+      {
+        "type": "chord",
+        "content": "La–           Mi "
+      },
+      {
+        "type": "verse",
+        "content": "De mis pecados, Señor, no te acuerdes,"
+      },
+      {
+        "type": "chord",
+        "content": "                     Re– Fa                      Mi "
+      },
+      {
+        "type": "verse",
+        "content": "acuérdate, Señor, que eres misericordia."
+      },
+      {
+        "type": "chord",
+        "content": "Fa                                     Mi "
+      },
+      {
+        "type": "verse",
+        "content": "Rocíame, Señor, de tu misericordia."
+      },
+      {
+        "type": "chord",
+        "content": "         Fa                                       Mi "
+      },
+      {
+        "type": "verse",
+        "content": "Sumérgeme, Señor, en tu misericordia."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La–                           Mi  "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI, SEÑOR, LEVANTO MI ALMA ..."
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 25,
+    "title": "A TI, SEÑOR, LEVANTO MI ALMA",
+    "subTitle": "Salmo 25 (24)",
+    "capo": 3,
+    "tags": ["psalm", "lent"],
+    "tone": "La-"
+  },
+  {
+    "lyric": [[
+      {
+        "type": "chord",
+        "content": "Re–                        La7 "
+      },
+      {
+        "type": "verse",
+        "content": "A ti, Señor, se debe la alabanza, en Sión."
+      },
+      {
+        "type": "chord",
+        "content": "                             Re– "
+      },
+      {
+        "type": "verse",
+        "content": "A ti se te cumple el voto, en Jerusalén."
+      },
+      {
+        "type": "chord",
+        "content": "Sol–                   Re–         "
+      },
+      {
+        "type": "verse",
+        "content": "A ti que escuchas la oración"
+      },
+      {
+        "type": "chord",
+        "content": "                             La7                                  Re– "
+      },
+      {
+        "type": "verse",
+        "content": "viene todo mortal, viene todo mortal."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Sib7                      La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI QUE ESCUCHAS LA ORACIÓN"
+      },
+      {
+        "type": "chord",
+        "content": "Sib7       "
+      },
+      {
+        "type": "chorus",
+        "content": "VIENE TODO MORTAL,"
+      },
+      {
+        "type": "chord",
+        "content": "                                         La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "VIENE TODO MORTAL."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Re–                          La7 "
+      },
+      {
+        "type": "verse",
+        "content": "Pesan sobre nosotros nuestros pecados,"
+      },
+      {
+        "type": "chord",
+        "content": "                           Re– "
+      },
+      {
+        "type": "verse",
+        "content": "mas tú perdonas nuestras culpas."
+      },
+      {
+        "type": "chord",
+        "content": "                              La7  "
+      },
+      {
+        "type": "verse",
+        "content": "Dichoso el que tú eliges, el que tú llamas,"
+      },
+      {
+        "type": "chord",
+        "content": "                          Re– "
+      },
+      {
+        "type": "verse",
+        "content": "vivirá en tus atrios."
+      },
+      {
+        "type": "chord",
+        "content": "Sol–                   Re–         "
+      },
+      {
+        "type": "verse",
+        "content": "A ti que escuchas la oración"
+      },
+      {
+        "type": "chord",
+        "content": "                             La7                                  Re– "
+      },
+      {
+        "type": "verse",
+        "content": "viene todo mortal, viene todo mortal."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Sib7                      La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI QUE ESCUCHAS LA ORACIÓN …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Re–                                La7 "
+      },
+      {
+        "type": "verse",
+        "content": "¡Nos saciaremos de los bienes de tu casa,"
+      },
+      {
+        "type": "chord",
+        "content": "                     Re– "
+      },
+      {
+        "type": "verse",
+        "content": "de la santidad de tu templo!"
+      },
+      {
+        "type": "chord",
+        "content": "                                                     "
+      },
+      {
+        "type": "verse",
+        "content": "Con los prodigios de tu amor"
+      },
+      {
+        "type": "chord",
+        "content": "              La7    "
+      },
+      {
+        "type": "verse",
+        "content": "tú nos hablas,"
+      },
+      {
+        "type": "chord",
+        "content": "                                          "
+      },
+      {
+        "type": "verse",
+        "content": "con los portentos de tu justicia"
+      },
+      {
+        "type": "chord",
+        "content": "               Re– "
+      },
+      {
+        "type": "verse",
+        "content": "nos respondes."
+      },
+      {
+        "type": "chord",
+        "content": "Sol–                   Re–         "
+      },
+      {
+        "type": "verse",
+        "content": "A ti que escuchas la oración"
+      },
+      {
+        "type": "chord",
+        "content": "                             La7                                 Re– "
+      },
+      {
+        "type": "verse",
+        "content": "viene todo mortal, viene todo mortal."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Sib7                      La7 "
+      },
+      {
+        "type": "chorus",
+        "content": "A TI QUE ESCUCHAS LA ORACIÓN …"
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 26,
+    "title": "A TI, SEÑOR, SE DEBE LA ALABANZA EN SIÓN",
+    "subTitle": "Salmo 65 (64)",
+    "capo": 3,
+    "tone": "Re-",
+    "tags": ["psalm", "lent", "lutes and vespers"]
+  },
+  {
+    "lyric": [[
+      {
+        "type": "chord",
+        "content": "La–                        "
+      },
+      {
+        "type": "verse",
+        "content": "Hacía calor aquel día"
+      },
+      {
+        "type": "chord",
+        "content": "Re–                     Mi  "
+      },
+      {
+        "type": "verse",
+        "content": "cuando Abraham estaba sentado"
+      },
+      {
+        "type": "chord",
+        "content": "                   La– "
+      },
+      {
+        "type": "verse",
+        "content": "delante de su tienda."
+      },
+      {
+        "type": "chord",
+        "content": "                        "
+      },
+      {
+        "type": "verse",
+        "content": "Hacía calor aquel día"
+      },
+      {
+        "type": "chord",
+        "content": "Re–                    Mi "
+      },
+      {
+        "type": "verse",
+        "content": "cuando Abraham estaba sentado"
+      },
+      {
+        "type": "chord",
+        "content": "                          La– "
+      },
+      {
+        "type": "verse",
+        "content": "cerca del encinar de Mambré."
+      },
+      {
+        "type": "chord",
+        "content": "                        Sol           Fa     "
+      },
+      {
+        "type": "verse",
+        "content": "Alzando los ojos, miró,"
+      },
+      {
+        "type": "chord",
+        "content": "                  Mi     "
+      },
+      {
+        "type": "verse",
+        "content": "y tres hombres de pie"
+      },
+      {
+        "type": "chord",
+        "content": "                       La– "
+      },
+      {
+        "type": "verse",
+        "content": "estaban delante."
+      },
+      {
+        "type": "chord",
+        "content": "                             Mi           "
+      },
+      {
+        "type": "verse",
+        "content": "En cuanto los vio"
+      },
+      {
+        "type": "chord",
+        "content": "                                                       La– "
+      },
+      {
+        "type": "verse",
+        "content": "se inclinó hasta el suelo y dijo:"
+      },
+      {
+        "type": "chord",
+        "content": "                       Sol       "
+      },
+      {
+        "type": "verse",
+        "content": "«Oh Señor mío,"
+      },
+      {
+        "type": "chord",
+        "content": "                          Fa                         Mi "
+      },
+      {
+        "type": "verse",
+        "content": "no pases te ruego sin detenerte.»"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "        La–                                            Sol  "
+      },
+      {
+        "type": "verse",
+        "content": "SIN DETENERTE, NO PASES TE RUEGO"
+      },
+      {
+        "type": "chord",
+        "content": "                        Fa                Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "SIN DETENERTE, SIN DETENERTE."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La–              Mi                            "
+      },
+      {
+        "type": "verse",
+        "content": "«Os traeré un poco de agua,"
+      },
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "verse",
+        "content": "os lavaré los pies"
+      },
+      {
+        "type": "chord",
+        "content": "                                   La– "
+      },
+      {
+        "type": "verse",
+        "content": "y reposaréis a la sombra,"
+      },
+      {
+        "type": "chord",
+        "content": "                                Mi  "
+      },
+      {
+        "type": "verse",
+        "content": "os traeré un bocado, os reconfortaréis"
+      },
+      {
+        "type": "chord",
+        "content": "                                           La– "
+      },
+      {
+        "type": "verse",
+        "content": "y luego seguiréis adelante."
+      },
+      {
+        "type": "chord",
+        "content": "                              Sol "
+      },
+      {
+        "type": "verse",
+        "content": "No por casualidad"
+      },
+      {
+        "type": "chord",
+        "content": "                                 Fa                 Mi "
+      },
+      {
+        "type": "verse",
+        "content": "habéis pasado hoy delante de mí.»"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "             La–                                      Sol       "
+      },
+      {
+        "type": "chorus",
+        "content": "«OH SEÑOR MÍO, NO PASES TE RUEGO"
+      },
+      {
+        "type": "chord",
+        "content": "                       Fa                            Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "SIN DETENERTE, SIN DETENERTE."
+      },
+      {
+        "type": "chord",
+        "content": "                   La–                                         Sol "
+      },
+      {
+        "type": "chorus",
+        "content": "SIN DETENERTE, NO PASES TE RUEGO"
+      },
+      {
+        "type": "chord",
+        "content": "                       Fa                Mi "
+      },
+      {
+        "type": "chorus",
+        "content": "SIN DETENERTE, SIN DETENERTE.»"
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 27,
+    "title": "ABRAHAM",
+    "subTitle": "Génesis 18,1-5",
+    "capo": 0,
+    "tone": "La-",
+    "tags": ["psalm", "entrance", "lutes and vespers"]
+  },
+  {
+    "lyric": [[
+      {
+        "type": "chord",
+        "content": "Re–                             "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ACLAMAD AL SEÑOR,"
+      },
+      {
+        "type": "chord",
+        "content": "Sol–                Re– "
+      },
+      {
+        "type": "chorus",
+        "content": "TODA LA TIERRA,"
+      },
+      {
+        "type": "chord",
+        "content": "           Fa                  Sol                             La "
+      },
+      {
+        "type": "chorus",
+        "content": "SERVID AL SEÑOR CON ALEGRÍA!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "          Re–       La7 "
+      },
+      {
+        "type": "verse",
+        "content": "¡Acercaos a él"
+      },
+      {
+        "type": "chord",
+        "content": "                       Re– "
+      },
+      {
+        "type": "verse",
+        "content": "con gritos de júbilo!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                  "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ACLAMAD AL SEÑOR …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                          Re–                          La7 "
+      },
+      {
+        "type": "verse",
+        "content": "Porque el Señor es nuestro Dios,"
+      },
+      {
+        "type": "chord",
+        "content": "                    Re– "
+      },
+      {
+        "type": "verse",
+        "content": "y nosotros su pueblo."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                  "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ACLAMAD AL SEÑOR …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "        Re–                          La7     "
+      },
+      {
+        "type": "verse",
+        "content": "¡Entrad por sus puertas"
+      },
+      {
+        "type": "chord",
+        "content": "                                        Re– "
+      },
+      {
+        "type": "verse",
+        "content": "con himnos de alegría!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                  "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ACLAMAD AL SEÑOR …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "             Re–                 La7 "
+      },
+      {
+        "type": "verse",
+        "content": "¡Bendecid su nombre,"
+      },
+      {
+        "type": "chord",
+        "content": "                           Re– "
+      },
+      {
+        "type": "verse",
+        "content": "dándole gracias!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                  "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ACLAMAD AL SEÑOR …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                           Re–            La7  "
+      },
+      {
+        "type": "verse",
+        "content": "Porque es bueno el Señor,"
+      },
+      {
+        "type": "chord",
+        "content": "                                  Re– "
+      },
+      {
+        "type": "verse",
+        "content": "es eterno su amor con nosotros."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                  "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ACLAMAD AL SEÑOR …"
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 28,
+    "title": "ACLAMAD AL SEÑOR",
+    "subTitle": "Salmo 100 (99)",
+    "capo": 0,
+    "tone": "Re-",
+    "tags": ["psalm", "exit", "lutes and vespers"]
+  },
+  {
+    "lyric": [[
+      {
+        "type": "chord",
+        "content": "Si–                       "
+      },
+      {
+        "type": "chorus",
+        "content": "AL DESPERTAR"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                                       Si– "
+      },
+      {
+        "type": "chorus",
+        "content": "ME SACIARÉ DE TU SEMBLANTE, SEÑOR."
+      },
+      {
+        "type": "chord",
+        "content": "                            Mi– "
+      },
+      {
+        "type": "chorus",
+        "content": "AL DESPERTAR"
+      },
+      {
+        "type": "chord",
+        "content": "                                     Si– "
+      },
+      {
+        "type": "chorus",
+        "content": "ME SACIARÉ DE TU SEMBLANTE, SEÑOR."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "      Mi–                  Si– "
+      },
+      {
+        "type": "verse",
+        "content": "Escucha, Señor, mi oración,"
+      },
+      {
+        "type": "chord",
+        "content": "    Mi–                                        Si– "
+      },
+      {
+        "type": "verse",
+        "content": "atiende, Señor, a mi clamor,"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                   Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "presta oídos a mi súplica,"
+      },
+      {
+        "type": "chord",
+        "content": "             Sol                                 Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "que mis labios no traicionan, Señor."
+      },
+      {
+        "type": "chord",
+        "content": "Sol                              Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "Salga de ti la sentencia,"
+      },
+      {
+        "type": "chord",
+        "content": "                       Mi–                                                   Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "porque tus ojos ven, tus ojos ven mi rectitud."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "            Si–                     "
+      },
+      {
+        "type": "chorus",
+        "content": "AL DESPERTAR …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Mi–                 Si– "
+      },
+      {
+        "type": "verse",
+        "content": "Sondea, Señor, mi corazón,"
+      },
+      {
+        "type": "chord",
+        "content": "       Mi–                Si– "
+      },
+      {
+        "type": "verse",
+        "content": "escrútalo de noche, Señor;"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                             Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "pruébame al crisol, pruébame al crisol"
+      },
+      {
+        "type": "chord",
+        "content": "                      Sol                                    Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "porque tú sabes que no hay malicia en mí;"
+      },
+      {
+        "type": "chord",
+        "content": "                Sol                                      Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "que mi boca no miente como hacen los hombres."
+      },
+      {
+        "type": "chord",
+        "content": "             Mi–     "
+      },
+      {
+        "type": "verse",
+        "content": "Que he guardado tu Palabra,"
+      },
+      {
+        "type": "chord",
+        "content": "                                         Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "que no he seguido los caminos del violento,"
+      },
+      {
+        "type": "chord",
+        "content": "                       Sol              Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "que a tus huellas he ajustado mis pasos,"
+      },
+      {
+        "type": "chord",
+        "content": "         Mi–           Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "que no vacilaré, que no vacilaré."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "            Si–                     "
+      },
+      {
+        "type": "chorus",
+        "content": "AL DESPERTAR …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Mi–                   Si– "
+      },
+      {
+        "type": "verse",
+        "content": "A ti yo te invoco, Señor;"
+      },
+      {
+        "type": "chord",
+        "content": "        Mi–                                    Si– "
+      },
+      {
+        "type": "verse",
+        "content": "concédeme, Señor, una respuesta;"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                                   Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "muéstrame los prodigios de tu amor,"
+      },
+      {
+        "type": "chord",
+        "content": "                     Sol                       Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "porque tú salvas al que se apoya en ti,"
+      },
+      {
+        "type": "chord",
+        "content": "                        Sol "
+      },
+      {
+        "type": "verse",
+        "content": "porque tú ayudas"
+      },
+      {
+        "type": "chord",
+        "content": "                         Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "al que se refugia a tu derecha."
+      },
+      {
+        "type": "chord",
+        "content": "Mi–                                     Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "Como a la niña de tus ojos guárdame,"
+      },
+      {
+        "type": "chord",
+        "content": "Mi–                                Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "a la sombra de tus alas escóndeme,"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                     Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "mira que quieren matarme."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                   Si–                       "
+      },
+      {
+        "type": "chorus",
+        "content": "AL DESPERTAR …"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "Mi–                   Si– "
+      },
+      {
+        "type": "verse",
+        "content": "Míralos, están cerrados en su orgullo,"
+      },
+      {
+        "type": "chord",
+        "content": "Mi–                     Si– "
+      },
+      {
+        "type": "verse",
+        "content": "hablan, la arrogancia está en su boca."
+      },
+      {
+        "type": "chord",
+        "content": "Sol                                  Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "Avanzan contra mí, avanzan contra mí."
+      },
+      {
+        "type": "chord",
+        "content": "Sol            Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "¡Ayúdame tú, Señor,"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                          Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "líbrame de los hombres de este mundo,"
+      },
+      {
+        "type": "chord",
+        "content": "Mi–                                         Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "de los hombres cuyo premio es esta vida!"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                      Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "¡Cólmalos de tus bienes, Señor,"
+      },
+      {
+        "type": "chord",
+        "content": "Sol                     Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "llénales el vientre y que sus hijos se sacien!"
+      },
+      {
+        "type": "chord",
+        "content": "Mi– "
+      },
+      {
+        "type": "verse",
+        "content": "Que yo al despertar, que yo por tu amor"
+      },
+      {
+        "type": "chord",
+        "content": "                  Sol                               Fa# "
+      },
+      {
+        "type": "verse",
+        "content": "me saciaré de tu rostro Señor."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "      Si–                       "
+      },
+      {
+        "type": "chorus",
+        "content": "AL DESPERTAR …"
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 29,
+    "title": "AL DESPERTAR",
+    "subTitle": "Salmo 17 (16)",
+    "capo": 0,
+    "tags": ["psalm", "lutes and vespers", "lent"],
+    "tone": "Si-"
+  },
+  {
+    "lyric": [[
+      {
+        "type": "chord",
+        "content": "La "
+      },
+      {
+        "type": "verse",
+        "content": "¡Alabad al Señor en el Cielo,"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                       Fa#– "
+      },
+      {
+        "type": "verse",
+        "content": "alabad al Señor en lo alto,"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La  "
+      },
+      {
+        "type": "verse",
+        "content": "alabadlo, todos sus ángeles,"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                      Fa#– "
+      },
+      {
+        "type": "verse",
+        "content": "alabadlo, todos sus ejércitos!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "La "
+      },
+      {
+        "type": "verse",
+        "content": "Alabadlo, sol y luna,"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": "                       Fa#– "
+      },
+      {
+        "type": "verse",
+        "content": "alabadlo, estrellas lucientes."
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Alabadlo, espacios celestes"
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "y aguas que cuelgan en el cielo."
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Alaben el nombre del Señor,"
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "porque Él lo mandó, y existieron."
+      },
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "chord",
+        "content": " "
+      },
+      {
+        "type": "verse",
+        "content": "Les dio consistencia perpetua"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "y una ley que no pasará."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Alabad al Señor en la tierra,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "cetáceos y abismos del mar."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Rayos, granizo, nieve y bruma,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "viento huracanado"
+      },
+      {
+        "type": "verse",
+        "content": "que cumple sus órdenes."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Montes y todas las sierras,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "árboles frutales y cedros."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Fieras y animales domésticos,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "reptiles y pájaros que vuelan."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Reyes y pueblos del orbe,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "príncipes y jefes del mundo."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Los jóvenes"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "y también las doncellas,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "los viejos a una con los niños."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Alaben el nombre del Señor,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "el único nombre sublime."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Su majestad,"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "sobre el cielo y la tierra,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Él da fuerza y vigor a su pueblo."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "Alabanza de todos sus fieles,"
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ],
+    [
+      {
+        "type": "verse",
+        "content": "de Israel, su pueblo elegido."
+      }
+    ],
+    [
+      {
+        "type": "chorus",
+        "content": "¡ALABADLO!"
+      }
+    ]],
+    "stage": "precatechumenate",
+    "page": 30,
+    "title": "ALABAD AL SEÑOR EN EL CIELO",
+    "subTitle": "Salmo 148",
+    "capo": 0,
+    "tags": ["psalm", "lutes and vespers"],
+    "tone": "La"
+  }
+]
