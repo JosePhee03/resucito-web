@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import express from 'express'
-import canticles from './RESUCITO/ES/v5/2014.json' assert { type: 'json' }
+import canticles from './RESUCITO/ES/v6/2014.json' assert { type: 'json' }
 import cors from 'cors'
 
 const QUERY_PARAMS = {
@@ -8,6 +8,13 @@ const QUERY_PARAMS = {
   LIMIT: 'limit',
   SEARCH: 'q'
 }
+
+const STAGE = [
+  'precatechumenate',
+  'catechumenate',
+  'liturgy',
+  'election'
+]
 
 const PORT = process.env.PORT ?? 3001
 const app = express()
@@ -70,7 +77,7 @@ app.get('/search', async (req, res) => {
   const filterCanticles = search === ''
     ? canticles
     : canticles.filter(canticle => {
-      if (canticle.lyric.some((letter) => new RegExp(search).test(letter.content))) {
+      if (canticle.lyric.split(' ').some((letter) => new RegExp(search).test(letter))) {
         return true
       } else return false
     })
@@ -105,9 +112,9 @@ app.get('/:page', async (req, res) => {
 })
 
 app.get('/stage/:stage', async (req, res) => {
-  const stage = Number(req.params.stage)
+  const stage = req.params.stage
 
-  if ([0, 1, 2, 3].includes(stage)) {
+  if (STAGE.includes(stage)) {
     const newCanticles = canticles.filter(canticle => stage === canticle.stage)
     return res.send({ canticles: newCanticles, length: newCanticles.length })
   } else return res.send('Stage no encontrado')
