@@ -78,13 +78,13 @@ export class CSearch extends LitElement {
       <form role="search" action="/search" method="get">
         <input placeholder="${i18n[lang].placeholder}" class="input-search" type="text" accesskey="k" aria-label="${i18n[lang].inputSearch}">
         <div class="button-cont">
-          <u-button aria-hidden="true" type="reset" ariaLabel="${i18n[lang].buttonReset}">
-            <u-icon color="text-color" id="exit" size="lg"></u-icon>
-          </u-button>
+          <c-button aria-hidden="true" type="reset" ariaLabel="${i18n[lang].buttonReset}">
+            <c-icon color="text-color" id="exit" size="lg"></c-icon>
+          </c-button>
           <hr>
-          <u-button class="button-submit" type="submit" ariaLabel="${i18n[lang].buttonSubmit}">
-            <u-icon color="text-color" id="search" size="xl"></u-icon>
-          </u-button>
+          <c-button class="button-submit" type="submit" ariaLabel="${i18n[lang].buttonSubmit}">
+            <c-icon color="text-color" id="search" size="xl"></c-icon>
+          </c-button>
         </div>
       </form>
     `

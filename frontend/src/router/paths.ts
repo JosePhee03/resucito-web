@@ -24,9 +24,9 @@ export const routes: Route[] = [
   {
     path: '/canticle/:page',
     name: 'canticle',
-    component: 'layout-canticle',
+    component: 'page-canticle',
     action: async () => {
-      await import('../pages/canticle/components/layout/layout-canticle.js')
+      await import('../pages/canticle/page-canticle.js')
     }
   },
   {
