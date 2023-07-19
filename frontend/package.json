@@ -9,9 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vaadin/router": "^1.7.5",
+    "@vaadin/router": "1.7.5",
     "lit": "2.7.2",
-    "sass": "1.63.6"
+    "sass": "1.63.6",
+    "zustand": "4.3.9"
   },
   "devDependencies": {
     "@types/node": "20.3.1",
