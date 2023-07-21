@@ -11,14 +11,14 @@ export class CAside extends LitElement {
       :host {
         z-index: 21;
       }
-
+      
       * {
         box-sizing: border-box;
       }
-
+      
       aside {
         position: fixed;
-        width: 300px;
+        width: fit-content;
         height: 100vh;
         background: var(--primary-color);
         box-shadow: 0 2px 2px var(--neutral-light-color);
@@ -71,7 +71,7 @@ export class CAside extends LitElement {
         display: none;
       }
 
-      .close {
+      :host {
         width: fit-content;
       }
 
@@ -82,10 +82,10 @@ export class CAside extends LitElement {
 
       
       @media (max-width: 768px) {
-        aside.close {
+        :host.close {
           transform: translateX(-100%)
         }
-        c-aside {
+        :host {
           transform: translateX(100%)
         }
       }
@@ -106,7 +106,9 @@ export class CAside extends LitElement {
     const openAtrr = changedProperties.get('open')
 
     if (openAtrr === null) {
-      this.focus()
+      this.style.width = '300px'
+    } else {
+      this.style.width = 'fit-content'
     }
   }
 

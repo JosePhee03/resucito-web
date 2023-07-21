@@ -30,6 +30,14 @@ export const routes: Route[] = [
     }
   },
   {
+    path: '/editor/:page',
+    name: 'editor',
+    component: 'page-editor',
+    action: async () => {
+      await import('../pages/editor/page-editor.js')
+    }
+  },
+  {
     path: '(.*)',
     name: '404',
     component: 'page-not-found',

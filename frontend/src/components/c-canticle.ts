@@ -1,15 +1,14 @@
 import { LitElement, css, html } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
-import canticles from '@/data/canticles.json'
+import { Canticle } from '@/models/canticles'
 
 @customElement('c-canticle')
 export class CCanticle extends LitElement {
-  @state() canticle = canticles[5]
+  @state() canticle: Canticle | null = null
 
   static styles = css`
   :host {
       font-size: 16px;
-      width: fit-content;
 
       --text-2xl: 2em;
       --text-xl: 1.5em;
@@ -18,11 +17,14 @@ export class CCanticle extends LitElement {
       --text-sm: 0.875em;
       --text-xs: 0.75em;
     }
-
+    
     pre {
+      width: 100%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       margin: 0;
+      overflow: scroll;
       gap: var(--spacing-md);
     }
 
@@ -138,15 +140,42 @@ export class CCanticle extends LitElement {
           <b class="title">${title}</b>
           <b class="subtitle">${subTitle}</b>
         </div>
-        ${lyric.map((part) => {
-          return html`<div class="divisor">${part.map(({ content, type }) => {
-            return html`<span class="t ${type}">${content}</span>`
-          })}</div>`
+        ${lyric.split('\n').map((text) => {
+          const { content, type } = this._parseLyric(text)
+          return content !== undefined && type !== undefined
+          ? html`<span class="${type}">${content}</span>`
+          : html`<br>`
         })}
       </pre>`
   }
 
   render () {
     return html`${this.templeteCanticle}`
+  }
+
+  _parseLyric (text: string) {
+    const textRole = [
+      '&verse&',
+      '&chorus&',
+      '&chord&',
+      '&coro&'
+    ]
+
+    let type
+    let content
+    for (const role of textRole) {
+      const match = text.match(role)
+      if (match == null) continue
+      else {
+        type = role.replaceAll('&', '')
+        content = match.input?.replace(role, '').trim()
+        break
+      }
+    }
+
+    return {
+      type,
+      content
+    }
   }
 }
