@@ -1,14 +1,20 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "target": "ESNext",
-    "outDir": "./build",
-    "rootDir": "./src",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "strict": true,
-    "resolveJsonModule": true,
+    "target": "ESNext", // O la versión de ECMAScript que desees.
+    "module": "CommonJS", // Utilizamos "ESNext" para tener soporte completo de módulos ES.
+    "outDir": "./build", // Carpeta donde se guardarán los archivos compilados.
+    "allowJs": true,
+    "strict": true, // Habilita todas las opciones estrictas de TypeScript (recomendado).
+    "resolveJsonModule": true, // Permite importar archivos JSON como módulos.
+    "allowSyntheticDefaultImports": true, // Permite el uso de sintaxis de importación de módulos con "export default".
+    "esModuleInterop": true, // Habilita la compatibilidad con la sintaxis de importación "import module from 'module';".
+    "moduleResolution": "node", // Resolución de módulos usando el sistema de archivos de Node.js.
+    "skipLibCheck": true,
+    
+    "noImplicitAny": true, // Reporta errores si una expresión tiene tipo implícito 'any'.
+    "noUnusedLocals": true, // Reporta errores si una variable local está declarada pero no se usa.
+    "noUnusedParameters": true, // Reporta errores si un parámetro de función no se usa.
+    "typeRoots": ["../@types"]
   },
-  "include": [ "src/**/*.ts" ],
-  "exclude": [ "build", "node_modules" ]
+  "exclude": ["node_modules", "build"] // Excluye las carpetas que no deben ser compiladas.
 }
