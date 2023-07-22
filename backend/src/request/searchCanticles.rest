@@ -1,0 +1,2 @@
+GET http://localhost:2000/canticles/search?stage=liturgy,election&limit=100&skip=0
+content-type: application/json
