@@ -1,2 +1,2 @@
-PUT http://localhost:2000/canticles/21
+DELETE http://localhost:2000/canticles/23
 content-type: application/json

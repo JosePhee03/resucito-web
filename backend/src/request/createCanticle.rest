@@ -1,6 +1,5 @@
-PUT http://localhost:2000/canticles/23
+POST http://localhost:2000/canticles
 content-type: application/json
-
 
 {
   "lyric": "Test lyric",

@@ -6,11 +6,11 @@ import { queryHandle } from '../utils/query.util'
 import data from '../RESUCITO/ES/v6/2014.json'
 import { filterByStage } from '../utils/filterCanticles.util'
 
-const CANTICLE = data as Canticle[]
+let CANTICLES = data as Canticle[]
 
 export const getCanticles = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { data, length, limit, skip } = queryHandle<Canticle>(CANTICLE, req)
+    const { data, length, limit, skip } = queryHandle<Canticle>(CANTICLES, req)
     res.send({ canticles: data, length, skip, limit })
   } catch (e) {
     handleHttp(res, 'ERROR_GET_CANTICLES')
@@ -20,7 +20,7 @@ export const getCanticles = async (req: Request, res: Response): Promise<void> =
 export const getCanticle = async ({ params }: Request, res: Response): Promise<void> => {
   try {
     const { page } = params
-    const canticle = CANTICLE.find(c => c.page === +page)
+    const canticle = CANTICLES.find(c => c.page === +page)
     if (canticle === undefined) throw Error('Canto no encontrado')
     res.send(canticle)
   } catch (e) {
@@ -30,7 +30,7 @@ export const getCanticle = async ({ params }: Request, res: Response): Promise<v
 
 export const searchCanticles = (req: Request, res: Response): void => {
   const stage = filterByStage(req)
-  const newCaticles = CANTICLE.filter(c => stage.includes(c.stage))
+  const newCaticles = CANTICLES.filter(c => stage.includes(c.stage))
   const { data, length, limit, skip } = queryHandle<Canticle>(newCaticles, req)
 
   try {
@@ -40,15 +40,41 @@ export const searchCanticles = (req: Request, res: Response): void => {
   }
 }
 
-export const deleteCanticle = ({ params }: Request, res: Response): void => {
+export const updateCanticle = ({ body, params }: Request, res: Response): void => {
   const page = params.page ?? 0
-  const canticle = CANTICLE.find(c => c.page === +page)
-  console.log(canticle)
+  const newCanticles = CANTICLES.map(c => {
+    if (c.page === +page) return body
+    else return c
+  })
 
   try {
-    if (canticle === undefined) throw Error('Canto no encontrado')
-    res.send(canticle)
+    CANTICLES = newCanticles
+    res.send(newCanticles)
   } catch (e) {
     handleHttp(res, 'ERROR_PUT_CANTICLE')
+  }
+}
+
+export const createCanticle = ({ body }: Request, res: Response): void => {
+  const newCanticles = [...CANTICLES, body]
+
+  try {
+    CANTICLES = newCanticles
+    res.send(newCanticles)
+  } catch (e) {
+    handleHttp(res, 'ERROR_POST_CANTICLE')
+  }
+}
+
+export const deleteCanticle = (req: Request, res: Response): void => {
+  const page = req.params.page
+
+  const newCanticles = CANTICLES.filter(c => c.page !== +page)
+
+  try {
+    CANTICLES = newCanticles
+    res.send(newCanticles)
+  } catch (e) {
+    handleHttp(res, 'ERROR_DELETE_CANTICLE')
   }
 }
