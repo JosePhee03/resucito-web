@@ -39,3 +39,16 @@ export const searchCanticles = (req: Request, res: Response): void => {
     handleHttp(res, 'ERROR_GET_SEARCH_CANTICLES')
   }
 }
+
+export const deleteCanticle = ({ params }: Request, res: Response): void => {
+  const page = params.page ?? 0
+  const canticle = CANTICLE.find(c => c.page === +page)
+  console.log(canticle)
+
+  try {
+    if (canticle === undefined) throw Error('Canto no encontrado')
+    res.send(canticle)
+  } catch (e) {
+    handleHttp(res, 'ERROR_PUT_CANTICLE')
+  }
+}
