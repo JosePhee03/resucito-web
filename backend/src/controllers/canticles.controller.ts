@@ -5,6 +5,7 @@ import { queryHandle } from '../utils/query.util'
 
 import data from '../RESUCITO/ES/v6/2014.json'
 import { filterByStage } from '../utils/filterCanticles.util'
+import { filterByTags } from '../utils/filterTags.util'
 
 let CANTICLES = data as Canticle[]
 
@@ -30,7 +31,8 @@ export const getCanticle = async ({ params }: Request, res: Response): Promise<v
 
 export const searchCanticles = (req: Request, res: Response): void => {
   const stage = filterByStage(req)
-  const newCaticles = CANTICLES.filter(c => stage.includes(c.stage))
+  const tags = filterByTags(req)
+  const newCaticles = CANTICLES.filter(c => stage.includes(c.stage) && c.tags.some(t => tags.includes(t)))
   const { data, length, limit, skip } = queryHandle<Canticle>(newCaticles, req)
 
   try {
