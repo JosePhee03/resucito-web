@@ -1,15 +1,22 @@
-import { Canticle } from '@/models/canticles'
-import { getAllCanticles } from '@/services/getAllCanticles'
 import { LitElement, html, css } from 'lit'
-import { customElement, state } from 'lit/decorators.js'
+import { customElement, query, state } from 'lit/decorators.js'
+
+import { Canticle, Stage } from 'canticle'
 
 import '@components'
+import { searchCanticles } from '@/services/searchCanticle'
+import { when } from 'lit/directives/when.js'
 
 @customElement('page-search')
 export class PageSearch extends LitElement {
   @state() canticles: Canticle[] = []
-  @state() isLoading: boolean = true
+  @state() isLoading: boolean = false
   @state() isError: boolean = false
+  @state() skip: number = 0
+  @state() limit: number = 30
+  @state() stage: Stage | '' = ''
+
+  @query('#observerTarget') observerTarget: HTMLDivElement | undefined
 
   static styles = [
     css`
@@ -74,21 +81,17 @@ export class PageSearch extends LitElement {
           font-weight: 400;
           line-height: normal;
         }
+
+        #observerTarget {
+          display: grid;
+          place-items: center;
+          padding-block-start: var(--spacing-sm)
+        }
     `
   ]
 
-  async connectedCallback () {
-    super.connectedCallback()
-    const response = await getAllCanticles()
-
-    try {
-      this.canticles = response.canticles
-    } catch (e) {
-      console.log(e)
-      this.isError = true
-    } finally {
-      this.isLoading = false
-    }
+  firstUpdated () {
+    this.intersectionObserver()
   }
 
   get errorTemplate () {
@@ -107,9 +110,9 @@ export class PageSearch extends LitElement {
     return html`
       <a href="/canticle/${canticle.page}">
         <div class="canticle-cont">
-          <c-list-item-icon text="${canticle.page}" color="election"></c-list-item-icon>
+          <c-list-item-icon text="${canticle.page}" color="${canticle.stage}"></c-list-item-icon>
           <h3>${canticle.title ?? 'not fount'}</h3>
-          <small>${canticle.subTitle ?? 'notsd'}</small> 
+          <small>${canticle.subtitle ?? 'subtitle'}</small> 
         </div>
       </a>
     `
@@ -118,16 +121,51 @@ export class PageSearch extends LitElement {
   render () {
     return html`
       <main>
-        ${this.isLoading
-          ? this.loadingTemplate
-          : this.isError
+        ${this.isError
             ? this.errorTemplate
-            : this.canticles.length === 0
+            : this.canticles.length === 0 && !this.isLoading
               ? this.emplyCanticle
               : this.canticles.map(canticle => {
                 return this.canticleTemplete(canticle)
               })}
+        <div id="observerTarget">
+            ${when(this.isLoading, () => this.loadingTemplate)}
+        </div>
       </main>
     `
+  }
+
+  fetchData () {
+    const response = searchCanticles(this.stage, this.skip, this.limit)
+    if (!this.isLoading) {
+      response
+        .then(res => {
+          if (this.skip <= res.length + this.limit) { this.canticles.push(...res.canticles) }
+          this.skip += this.limit
+        })
+        .catch(e => {
+          console.log(e)
+          this.isError = true
+        })
+        .finally(() => {
+          this.isLoading = false
+        })
+    }
+  }
+
+  intersectionObserver () {
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          this.fetchData()
+          this.isLoading = true
+        }
+      },
+      { threshold: 1 }
+    )
+
+    if (this.observerTarget instanceof HTMLDivElement) {
+      observer.observe(this.observerTarget)
+    }
   }
 }

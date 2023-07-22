@@ -1,8 +1,8 @@
 import { Canticle } from 'canticle'
 import { URLCanticles } from './urlCanticles'
 
-export async function getCanticle (page: number) {
-  const request = await fetch(`${URLCanticles}/${page}`)
+export async function deleteCanticle (page: number) {
+  const request = await fetch(`${URLCanticles}/${page}`, { method: 'DELETE' })
 
   try {
     const response = await request.json()

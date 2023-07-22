@@ -7,7 +7,7 @@ declare module 'canticle' {
     title: string;
     page: number;
     stage: Stage;
-    subTitle: string;
+    subtitle: string;
   }
   
   export type Chord = string

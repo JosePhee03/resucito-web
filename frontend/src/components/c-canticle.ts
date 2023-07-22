@@ -1,10 +1,10 @@
+import { Canticle } from 'canticle'
 import { LitElement, css, html } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
-import { Canticle } from '@/models/canticles'
 
 @customElement('c-canticle')
 export class CCanticle extends LitElement {
-  @state() canticle: Canticle | null = null
+  @state() canticle: Canticle | undefined
 
   static styles = css`
   :host {
@@ -24,8 +24,7 @@ export class CCanticle extends LitElement {
       display: flex;
       flex-direction: column;
       margin: 0;
-      overflow: scroll;
-      gap: var(--spacing-md);
+      gap: var(--spacing-xs);
     }
 
     .num-page {
@@ -102,15 +101,9 @@ export class CCanticle extends LitElement {
       color: var(--secondary-color)
     }
 
-    @media (min-width: 768px) {
-      :host {
-        font-size: 18px
-      }
-    }
-
     @media (min-width: 1200px) {
       :host {
-        font-size: 20px
+        font-size: 18px
       }
     }
 
@@ -126,9 +119,9 @@ export class CCanticle extends LitElement {
   }
 
   get templeteCanticle () {
-    if (this.canticle == null) return html`<h1>Canto Vacio</h1>`
+    if (this.canticle === undefined) return html`<h1>Canto Vacio</h1>`
 
-    const { lyric, page, subTitle, title, capo, tone } = this.canticle
+    const { lyric, page, subtitle, title, capo, tone } = this.canticle
     return html`
       <pre>
         <b class="num-page">${page}</b>
@@ -138,7 +131,7 @@ export class CCanticle extends LitElement {
         </div>
         <div class="divisor">
           <b class="title">${title}</b>
-          <b class="subtitle">${subTitle}</b>
+          <b class="subtitle">${subtitle}</b>
         </div>
         ${lyric.split('\n').map((text) => {
           const { content, type } = this._parseLyric(text)

@@ -1,10 +1,18 @@
 import { LitElement, html, css } from 'lit'
-import { customElement } from 'lit/decorators.js'
+import { customElement, state } from 'lit/decorators.js'
+import { getCanticle } from '@/services/getCanticle'
+import { router } from '@/router/router'
 
+import { Canticle } from 'canticle'
 import '@components'
 
 @customElement('page-canticle')
 export class PageCanticle extends LitElement {
+  @state() canticle: Canticle | undefined
+  @state() page: number | undefined
+  @state() isError = false
+  @state() isLoading = true
+
   static styles = [
     css`
       :host {
@@ -24,11 +32,34 @@ export class PageCanticle extends LitElement {
     `
   ]
 
+  async connectedCallback () {
+    super.connectedCallback()
+    const page = Number(router.location.params.page)
+
+    if (isNaN(page)) this.isError = true
+    else {
+      this.page = page
+      const response = await getCanticle(this.page)
+      try {
+        this.canticle = response
+      } catch (e) {
+        console.log(e)
+        this.isError = true
+      } finally {
+        this.isLoading = false
+      }
+    }
+  }
+
   render () {
     return html`
       <main>
-        <c-tag text="precatecumenado" icon to="/search?precatechumenate"></c-tag>
-        <c-canticle></c-canticle>
+        ${this.canticle === undefined
+          ? html`<h1>Error</h1>`
+          : html`
+          <c-tag text="${this.canticle.stage}" to="/search?precatechumenate"></c-tag>
+          <c-canticle .canticle="${this.canticle}"></c-canticle>
+        `}
       </main>
     `
   }
