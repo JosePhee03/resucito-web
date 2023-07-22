@@ -1,4 +1,4 @@
-import { Stage } from '@/models/canticles'
+import { Stage } from 'canticle'
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
