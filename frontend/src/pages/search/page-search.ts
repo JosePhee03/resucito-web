@@ -1,11 +1,12 @@
 import { LitElement, html, css } from 'lit'
 import { customElement, query, state } from 'lit/decorators.js'
 
-import { Canticle, Stage } from 'canticle'
+import { Canticle, Stage, Tags } from 'canticle'
 
 import '@components'
 import { searchCanticles } from '@/services/searchCanticle'
 import { when } from 'lit/directives/when.js'
+import { router } from '@/router/router'
 
 @customElement('page-search')
 export class PageSearch extends LitElement {
@@ -14,7 +15,8 @@ export class PageSearch extends LitElement {
   @state() isError: boolean = false
   @state() skip: number = 0
   @state() limit: number = 30
-  @state() stage: Stage | '' = ''
+  @state() stage: Stage | string = ''
+  @state() tags: Tags | string = ''
 
   @query('#observerTarget') observerTarget: HTMLDivElement | undefined
 
@@ -92,6 +94,7 @@ export class PageSearch extends LitElement {
 
   firstUpdated () {
     this.intersectionObserver()
+    this.queryParams()
   }
 
   get errorTemplate () {
@@ -135,8 +138,16 @@ export class PageSearch extends LitElement {
     `
   }
 
+  queryParams () {
+    const query = new URLSearchParams(router.location.search)
+    const tags = query.get('tags') ?? ''
+    const stage = query.get('stage') ?? ''
+    this.stage = stage
+    this.tags = tags
+  }
+
   fetchData () {
-    const response = searchCanticles(this.stage, this.skip, this.limit)
+    const response = searchCanticles(this.stage, this.tags, this.skip, this.limit)
     if (!this.isLoading) {
       response
         .then(res => {
