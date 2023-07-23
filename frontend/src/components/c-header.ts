@@ -103,7 +103,7 @@ export class CHeader extends LitElement {
     return html`
       <header>
         <div class="left">
-          <c-button @click="${this._handleClickMenu}">
+          <c-button>
             <c-icon id="menu" size="xl"></c-icon>
           </c-button>
           <a class="logo-text" href="/">Resucito</a>
