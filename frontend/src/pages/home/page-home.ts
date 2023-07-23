@@ -27,7 +27,7 @@ const i18n = {
 
 const ArrayListHome: Array<Details | Anchor> = [
   {
-    href: '/search',
+    href: "/search?stage=precatechumenate,catechumenate,election,liturgy&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
     iconText: '',
     text: 'Índice Alfabético',
     color: 'default'
@@ -36,25 +36,25 @@ const ArrayListHome: Array<Details | Anchor> = [
     summary: 'Etapas del Camino',
     UnorderedList: [
       {
-        href: '/search?stage=precatechumenate',
+        href: "/search?stage=precatechumenate&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
         iconText: 'P',
         text: 'Precatecumenado',
         color: 'precatechumenate'
       },
       {
-        href: '/search?stage=catechumenate',
+        href: "/search?stage=catechumenate&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
         iconText: 'C',
         text: 'Catecumenado',
         color: 'catechumenate'
       },
       {
-        href: '/search?stage=election',
+        href: "/search?stage=election&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
         iconText: 'E',
         text: 'Elección',
         color: 'election'
       },
       {
-        href: '/search?stage=liturgy',
+        href: "/search?stage=liturgy&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
         iconText: 'L',
         text: 'Liturgia',
         color: 'liturgy'
@@ -65,31 +65,31 @@ const ArrayListHome: Array<Details | Anchor> = [
     summary: 'Tiempo Litúrgico',
     UnorderedList: [
       {
-        href: '/search?tags=advent',
+        href: '/search?tags=advent&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Adviento',
         color: 'default'
       },
       {
-        href: '/search?tags=christmas',
+        href: '/search?tags=christmas&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Navidad',
         color: 'default'
       },
       {
-        href: '/search?tags=lent',
+        href: '/search?tags=lent&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Cuaresma',
         color: 'default'
       },
       {
-        href: '/search?tags=easter',
+        href: '/search?tags=easter&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Pascua',
         color: 'default'
       },
       {
-        href: '/search?tags=pentecost',
+        href: '/search?tags=pentecost&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Pentecostés',
         color: 'default'
@@ -100,43 +100,43 @@ const ArrayListHome: Array<Details | Anchor> = [
     summary: 'Orden Litúrgico',
     UnorderedList: [
       {
-        href: '/search?tags=entrance',
+        href: '/search?tags=entrance&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Entrada',
         color: 'default'
       },
       {
-        href: '/search?tags=peace and offerings',
+        href: '/search?tags=peace and offerings&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Paz y ofrendas',
         color: 'default'
       },
       {
-        href: '/search?tags=fraction of bread',
+        href: '/search?tags=fraction of bread&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Fracción del pan',
         color: 'default'
       },
       {
-        href: '/search?tags=exit',
+        href: '/search?tags=exit&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Salida',
         color: 'default'
       },
       {
-        href: '/search?tags=signing to the virgin',
+        href: '/search?tags=signing to the virgin&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Canto a la Virgen',
         color: 'default'
       },
       {
-        href: "/search?tags=children's song",
+        href: "/search?tags=children's song&stage=liturgy,election,catechumenate,precatechumenate",
         iconText: '',
         text: 'Cantos de los niños',
         color: 'default'
       },
       {
-        href: '/search?tags=lutes and vespers',
+        href: '/search?tags=lutes and vespers&stage=liturgy,election,catechumenate,precatechumenate',
         iconText: '',
         text: 'Laudes y visperas',
         color: 'default'
