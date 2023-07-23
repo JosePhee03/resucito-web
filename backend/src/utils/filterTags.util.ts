@@ -19,17 +19,17 @@ const TAGS: Tags[] = [
 ]
 
 export function filterByTags (req: Request): Tags[] {
-  const queryTags = req.query.tag as String | undefined
+  const queryTags = req.query.tags as String | undefined
 
   if (queryTags !== undefined) {
     const newTagsArray = queryTags.split(',')
     const newTags = TAGS.filter(Tags => {
       return newTagsArray.some(item => item === Tags)
     })
-
-    if (newTags.length === 0) return TAGS
+    console.log(newTags)
+    if (newTags.length === 0) return []
     else return newTags
   }
 
-  return TAGS
+  return []
 }

@@ -32,7 +32,8 @@ export const getCanticle = async ({ params }: Request, res: Response): Promise<v
 export const searchCanticles = (req: Request, res: Response): void => {
   const stage = filterByStage(req)
   const tags = filterByTags(req)
-  const newCaticles = CANTICLES.filter(c => stage.includes(c.stage) && c.tags.some(t => tags.includes(t)))
+  console.log(tags)
+  const newCaticles = CANTICLES.filter(c => stage.includes(c.stage) || c.tags.some(t => tags.includes(t)))
   const { data, length, limit, skip } = queryHandle<Canticle>(newCaticles, req)
 
   try {

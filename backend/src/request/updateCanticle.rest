@@ -1,10 +1,10 @@
-PUT http://localhost:2000/canticles/23
+PUT http://localhost:2000/canticles/999
 content-type: application/json
 
 
 {
   "lyric": "Test lyric",
-  "stage": "Test Stage",
+  "stage": "liturgy",
   "page": 999,
   "title": "Test title",
   "subtitle": "Test subtitle",
