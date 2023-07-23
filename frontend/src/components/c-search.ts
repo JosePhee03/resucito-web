@@ -75,8 +75,15 @@ export class CSearch extends LitElement {
 
   render () {
     return html`
-      <form role="search" action="/search" method="get">
-        <input placeholder="${i18n[lang].placeholder}" class="input-search" type="text" accesskey="k" aria-label="${i18n[lang].inputSearch}">
+      <form @submit="${this._handleSubmit}" role="search" method="get">
+        <input 
+          placeholder="${i18n[lang].placeholder}"
+          class="input-search"
+          type="text"
+          accesskey="k"
+          name="search"
+          aria-label="${i18n[lang].inputSearch}"
+        >
         <div class="button-cont">
           <c-button aria-hidden="true" type="reset" ariaLabel="${i18n[lang].buttonReset}">
             <c-icon color="text-color" id="exit" size="lg"></c-icon>
@@ -88,5 +95,13 @@ export class CSearch extends LitElement {
         </div>
       </form>
     `
+  }
+
+  _handleSubmit (event: Event) {
+    event.preventDefault()
+    console.log(event)
+    const form = event.currentTarget as HTMLFormElement
+    const searchData = new FormData(form).get('search') as string
+    window.location.replace(`/search?q=${searchData}`)
   }
 }
