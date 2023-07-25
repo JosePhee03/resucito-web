@@ -1,6 +1,7 @@
 export * from './c-aside'
 export * from './c-button'
 export * from './c-canticle'
+export * from './c-filter'
 export * from './c-header'
 export * from './c-icon'
 export * from './c-list-item-icon'

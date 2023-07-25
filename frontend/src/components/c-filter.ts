@@ -1,4 +1,4 @@
-import { Stage, Tags } from 'canticle'
+wimport { Stage, Tags } from 'canticle'
 import { LitElement, html, css } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
 import { when } from 'lit/directives/when.js'

@@ -36,25 +36,25 @@ const ArrayListHome: Array<Details | Anchor> = [
     summary: 'Etapas del Camino',
     UnorderedList: [
       {
-        href: "/search?stage=precatechumenate&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
+        href: "/search?stage=precatechumenate&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
         iconText: 'P',
         text: 'Precatecumenado',
         color: 'precatechumenate'
       },
       {
-        href: "/search?stage=catechumenate&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
+        href: "/search?stage=catechumenate&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
         iconText: 'C',
         text: 'Catecumenado',
         color: 'catechumenate'
       },
       {
-        href: "/search?stage=election&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
+        href: "/search?stage=election&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
         iconText: 'E',
         text: 'Elección',
         color: 'election'
       },
       {
-        href: "/search?stage=liturgy&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
+        href: "/search?stage=liturgy&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
         iconText: 'L',
         text: 'Liturgia',
         color: 'liturgy'

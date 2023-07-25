@@ -99,7 +99,6 @@ export class CSearch extends LitElement {
 
   _handleSubmit (event: Event) {
     event.preventDefault()
-    console.log(event)
     const form = event.currentTarget as HTMLFormElement
     const searchData = new FormData(form).get('search') as string
     window.location.replace(`/search?q=${searchData}`)

@@ -1,9 +1,10 @@
+import { Stage } from 'canticle'
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 @customElement('c-tag')
 export class CTag extends LitElement {
-  @property() text = ''
+  @property() text: Stage | string = ''
   @property({ type: Boolean }) icon: true | null = null
   @property() to: string = ''
 
@@ -23,8 +24,8 @@ export class CTag extends LitElement {
         justify-content: center;
         align-items: center;
         border-radius: 99px;
-        border: 1px solid var(--light-gray, #CCC);
-        background: var(--light-gray, #CCC);
+        border: 1px solid var(--text-color);
+        background: var(--primary-color);
       }
 
       a, a:active, a:link, a:visited { 
@@ -34,6 +35,7 @@ export class CTag extends LitElement {
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        white-space: nowrap
       }
 
       a:hover {
@@ -47,12 +49,23 @@ export class CTag extends LitElement {
       c-icon:hover {
         cursor: pointer;
       }
+
+      .liturgy { background: var(--yellow)}
+      .catechumenate { background: var(--blue)}
+      .election { background: var(--green)}
+      .precatechumenate { background: var(--gray)}
     `
   ]
 
   render () {
+    const STAGE: string[] = [
+      'liturgy',
+      'catechumenate',
+      'election',
+      'precatechumenate'
+    ]
     return html`
-      <span>
+      <span class="${STAGE.includes(this.text) ? this.text : 'not found'}">
         ${this.icon != null
           ? html`<c-icon @click="${this.removeTag}" id="exit"></c-icon>`
           : ''
@@ -63,6 +76,7 @@ export class CTag extends LitElement {
   }
 
   removeTag () {
+    this.dispatchEvent(new CustomEvent('remove-tag', { detail: this.text, bubbles: true, composed: true }))
     this.remove()
   }
 }
