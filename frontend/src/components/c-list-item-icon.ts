@@ -4,7 +4,7 @@ import { customElement, property } from 'lit/decorators.js'
 
 @customElement('c-list-item-icon')
 export class CListItemIcon extends LitElement {
-  @property({ type: String }) color: Stage | 'default' | string = 'default'
+  @property({ type: String }) color: Stage | undefined
   @property({ type: String }) text: string = ''
 
   static styles = [
@@ -62,6 +62,6 @@ export class CListItemIcon extends LitElement {
   ]
 
   render () {
-    return html`<span role="listitem" class="${this.color} ${this.text === '' ? 'not-text' : 'text'}">${this.text}</span>`
+    return html`<span role="listitem" class="${this.color ?? 'default'} ${this.text === '' ? 'not-text' : 'text'}">${this.text}</span>`
   }
 }

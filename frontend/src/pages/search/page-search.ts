@@ -1,12 +1,14 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { LitElement, html, css } from 'lit'
 import { customElement, query, state } from 'lit/decorators.js'
+import { searchCanticles } from '@/services/searchCanticle'
+import { when } from 'lit/directives/when.js'
+import { router } from '@/router/router'
 
 import { Canticle, Stage, Tags } from 'canticle'
 
 import '@components'
-import { searchCanticles } from '@/services/searchCanticle'
-import { when } from 'lit/directives/when.js'
-import { router } from '@/router/router'
+import './components'
 
 @customElement('page-search')
 export class PageSearch extends LitElement {
@@ -23,78 +25,34 @@ export class PageSearch extends LitElement {
   static styles = [
     css`
       :host {
-        display: block;
+        display: grid;
+        place-items: center;
       }
 
       * { box-sizing: border-box }
 
       main {
         height: 100%;
+        max-width: 640px;
+        gap: var(--spacing-sm);
         display: flex;
         flex-direction: column;
-        align-items: center;
-      }
-      
-      a {
-        width: 100%;
-        max-width: 460px;
-        padding: var(--spacing-md) var(--spacing-lg);
-        border-radius: var(--rounded-xs);
-        text-decoration: none;
+        overflow-x: hidden;
       }
 
-      a:hover {
-        background: var(--hover-primary);
-        cursor: pointer;
+      #observerTarget {
+        display: grid;
+        place-items: center;
+        padding-block-start: var(--spacing-sm);
+        background: red;
+        padding: 20px;
       }
-
-      .canticle-cont {
-          width: fit-content;
-          display: grid;
-          grid-template-columns: fit-content 1fr;
-          grid-template-rows: repeat(auto);
-          grid-row-gap: var(--spacing-xs);
-        }
-
-        c-list-item-icon { 
-          grid-area: 1 / 1 / 3 / 2; 
-          width: fit-content;
-          height: fit-content;
-          margin-right: var(--spacing-sm)
-        }
-
-        h3 { 
-          grid-area: 1 / 2 / 2 / 3;
-          margin: 0;
-          color: var(--text-color);
-          font-size: var(--text-md);
-          font-family: var(--font);
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-        }
-
-        small { 
-          grid-area: 2 / 2 / 3 / 3;
-          color: var(--text-color);
-          font-family: var(--font);
-          font-size: var(--text-sm);
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-        }
-
-        #observerTarget {
-          display: grid;
-          place-items: center;
-          padding-block-start: var(--spacing-sm)
-        }
     `
   ]
 
   firstUpdated () {
-    this.intersectionObserver()
-    this.queryParams()
+    this._intersectionObserver()
+    this._queryParams()
   }
 
   get errorTemplate () {
@@ -109,28 +67,15 @@ export class PageSearch extends LitElement {
     return html`<h2>NO encontrado</h2>`
   }
 
-  canticleTemplete (canticle: Canticle) {
-    return html`
-      <a href="/canticle/${canticle.page}">
-        <div class="canticle-cont">
-          <c-list-item-icon text="${canticle.page}" color="${canticle.stage}"></c-list-item-icon>
-          <h3>${canticle.title ?? 'not fount'}</h3>
-          <small>${canticle.subtitle ?? 'subtitle'}</small> 
-        </div>
-      </a>
-    `
-  }
-
   render () {
     return html`
       <main>
+        <c-filter @remove-tag="${(e: CustomEvent) => this._removeQueryParam(e)}" .content="${this.stage},${this.tags}"></c-filter>
         ${this.isError
             ? this.errorTemplate
-            : this.canticles.length === 0 && !this.isLoading
+            : this.canticles.length === 0 && this.isLoading
               ? this.emplyCanticle
-              : this.canticles.map(canticle => {
-                return this.canticleTemplete(canticle)
-              })}
+              : html`<c-search-table .canticles="${this.canticles}"></c-search-table>`}
         <div id="observerTarget">
             ${when(this.isLoading, () => this.loadingTemplate)}
         </div>
@@ -138,7 +83,15 @@ export class PageSearch extends LitElement {
     `
   }
 
-  queryParams () {
+  _removeQueryParam (event: CustomEvent) {
+    const newSearchParams = (string: string) => string.split(',').filter(p => p !== event.detail as string)
+    this.stage = `${[...newSearchParams(this.stage)]}`
+    this.tags = `${[...newSearchParams(this.tags)]}`
+    console.log({ stage: this.stage, tags: this.tags })
+    window.location.search = `stage=${this.stage}&tags=${this.tags}`
+  }
+
+  _queryParams () {
     const query = new URLSearchParams(router.location.search)
     const tags = query.get('tags') ?? ''
     const stage = query.get('stage') ?? ''
@@ -146,7 +99,7 @@ export class PageSearch extends LitElement {
     this.tags = tags
   }
 
-  fetchData () {
+  _fetchData () {
     const response = searchCanticles(this.stage, this.tags, this.skip, this.limit)
     if (!this.isLoading) {
       response
@@ -164,11 +117,11 @@ export class PageSearch extends LitElement {
     }
   }
 
-  intersectionObserver () {
+  _intersectionObserver () {
     const observer = new IntersectionObserver(
       entries => {
         if (entries[0].isIntersecting) {
-          this.fetchData()
+          this._fetchData()
           this.isLoading = true
         }
       },
