@@ -11,25 +11,28 @@ export class FetchSearchCanticles {
   limit: number = 30
   tags: string = ''
   stage: string = ''
+  q: string = ''
   readonly host: ReactiveControllerHost
 
   constructor (host: ReactiveControllerHost) {
     (this.host = host).addController(this)
-    const { stage, tags } = getSearchQuery()
+    const { stage, tags, q } = getSearchQuery()
     this.tags = tags
     this.stage = stage
+    this.q = q
   }
 
   hostConnected () {
   }
 
   _fetchData () {
-    const response = searchCanticles(this.stage, this.tags, this.skip, this.limit)
+    const response = searchCanticles(this.q, this.stage, this.tags, this.skip, this.limit)
     this.isLoading = true
     response
       .then(res => {
         if (this.skip <= res.length + this.limit) { this.canticles.push(...res.canticles) }
         this.skip += this.limit
+        console.log({ canticle: this.canticles, newCanticle: res.canticles })
       })
       .catch(e => {
         console.log(e)

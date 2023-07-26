@@ -1,5 +1,3 @@
-import { router } from '@/router/router'
-
 export function updateQueryTags (string: string) {
   const { stage, tags } = getSearchQuery()
   const newTags = tags.split(',').filter(p => p !== string).join()
@@ -9,11 +7,11 @@ export function updateQueryTags (string: string) {
 }
 
 export function getSearchQuery () {
-  const query = new URLSearchParams(router.location.search)
+  const query = new URLSearchParams(window.location.search)
   const tags = query.get('tags') ?? ''
   const stage = query.get('stage') ?? ''
-
-  return { tags, stage }
+  const q = query.get('q') ?? ''
+  return { tags, stage, q }
 }
 
 export function parseSearchQuery (tags = '', stage = '', q = ''): string {
