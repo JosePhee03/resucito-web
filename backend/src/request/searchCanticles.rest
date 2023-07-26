@@ -1,2 +1,2 @@
-GET http://localhost:2000/canticles/search?q=aleluya
+GET http://localhost:2000/canticles/search?stage=election&limit=40
 content-type: application/json
