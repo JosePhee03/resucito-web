@@ -1,2 +1,2 @@
-GET http://localhost:2000/canticles/search?stage=liturgy&tags=psalm&q=a
+GET http://localhost:2000/canticles/search?q=aleluya
 content-type: application/json

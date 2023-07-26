@@ -11,9 +11,9 @@ export function filterByStage (req: Request): Stage[] {
       return newStageArray.some(item => item === stage)
     })
 
-    if (newStage.length === 0) return []
+    if (newStage.length === 0) return STAGE
     else return newStage
   }
 
-  return []
+  return STAGE
 }

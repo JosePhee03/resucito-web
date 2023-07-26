@@ -26,9 +26,9 @@ export function filterByTags (req: Request): Tags[] {
     const newTags = TAGS.filter(Tags => {
       return newTagsArray.some(item => item === Tags)
     })
-    if (newTags.length === 0) return []
+    if (newTags.length === 0) return TAGS
     else return newTags
   }
 
-  return []
+  return TAGS
 }
