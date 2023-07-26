@@ -1,10 +1,14 @@
 import { Canticle } from 'canticle'
 import { LitElement, html, css } from 'lit'
-import { customElement, state } from 'lit/decorators.js'
+import { customElement, query } from 'lit/decorators.js'
+import { when } from 'lit/directives/when.js'
+import { FetchSearchCanticles } from '../controllers/fetchSearchCanticles'
 
 @customElement('c-search-table')
 export class CSearchTable extends LitElement {
-  @state() canticles: Canticle[] = []
+  data = new FetchSearchCanticles(this)
+
+  @query('#observerTarget') observerTarget: HTMLDivElement | undefined
 
   static styles = [
     css`
@@ -77,6 +81,14 @@ export class CSearchTable extends LitElement {
         background: var(--hover-primary);
         cursor: pointer;
       }
+
+      #observerTarget {
+        display: grid;
+        place-items: center;
+        padding-block-start: var(--spacing-sm);
+        background: red;
+        padding: 20px;
+      }
     `
   ]
 
@@ -97,16 +109,52 @@ export class CSearchTable extends LitElement {
     `
   }
 
+  firstUpdated () {
+    this._intersectionObserver()
+  }
+
+  get loadingTemplate () {
+    return html`<h2>Loading...</h2>`
+  }
+
+  get emplyCanticle () {
+    return html`<h2>NO encontrado</h2>`
+  }
+
+  get errorTemplate () {
+    return html`<h2>Error :c</h2>`
+  }
+
   render () {
+    const { canticles, isLoading } = this.data
+
     return html`
-    <div role="grid" aria-rowcount="${this.canticles.length + 1}" aria-colcount="${3}" class="table">
+    <div role="grid" aria-rowcount="${canticles.length + 1}" aria-colcount="${3}" class="table">
       <div role="row" aria-rowindex="1" class="table-row table-head">
         <div role="columnheader" aria-colindex="1" class="col-1">Page</div>
         <div role="columnheader" aria-colindex="2" class="col-2">Canticle</div>
         <div role="columnheader" aria-colindex="3" class="col-3">Favorite</div>
       </div>
-      ${this.canticles.map((canticle, index) => this._rowSearchCanticle(canticle, index))}
+      ${canticles.map((canticle, index) => this._rowSearchCanticle(canticle, index))}
+      <div id="observerTarget">
+        ${when(isLoading, () => this.loadingTemplate)}
+      </div>
     </div>
     `
+  }
+
+  _intersectionObserver () {
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          this.data._fetchData()
+        }
+      },
+      { threshold: 1 }
+    )
+
+    if (this.observerTarget instanceof HTMLDivElement) {
+      observer.observe(this.observerTarget)
+    }
   }
 }

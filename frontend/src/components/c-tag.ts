@@ -1,5 +1,5 @@
 import { Stage } from 'canticle'
-import { LitElement, html, css } from 'lit'
+import { LitElement, html, css, nothing } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
 @customElement('c-tag')
@@ -67,16 +67,20 @@ export class CTag extends LitElement {
     return html`
       <span class="${STAGE.includes(this.text) ? this.text : 'not found'}">
         ${this.icon != null
-          ? html`<c-icon @click="${this.removeTag}" id="exit"></c-icon>`
-          : ''
+          ? html`<c-icon @click="${this._removeTag}" id="exit"></c-icon>`
+          : nothing
         }
         <a href="${this.to}">${this.text}</a>
       </span>
     `
   }
 
-  removeTag () {
-    this.dispatchEvent(new CustomEvent('remove-tag', { detail: this.text, bubbles: true, composed: true }))
+  _removeTag () {
+    this.dispatchEvent(new CustomEvent('remove-tag', {
+      detail: this.text,
+      bubbles: true,
+      composed: true
+    }))
     this.remove()
   }
 }

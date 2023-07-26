@@ -19,7 +19,7 @@ export class CDetails extends LitElement {
         align-self: stretch;
       }
       
-      details[open] > summary > u-icon {
+      details[open] > summary > c-icon {
         rotate: 180deg;
       }
 
@@ -28,7 +28,7 @@ export class CDetails extends LitElement {
         border-radius: var(--rounded-xs);
         background: var(--trasparent-red-10, rgba(255, 0, 0, 0.10));
         color: var(--secondary-color, #F00);
-        font-family: Inter;
+        font-family: var(--font);
         font-size: var(--text-md);
         font-style: normal;
         font-weight: 700;
@@ -57,7 +57,7 @@ export class CDetails extends LitElement {
       <details open>
         <summary>
           <span>${this.sumary}</span>
-          <u-icon id="chevron-down" size="lg"></u-icon>
+          <c-icon id="chevron-down" size="lg"></c-icon>
         </summary>
         <ul>
          <slot></slot>

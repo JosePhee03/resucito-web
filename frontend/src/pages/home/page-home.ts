@@ -8,7 +8,7 @@ interface Anchor {
   href: string
   iconText: string
   text: string
-  color: string
+  color?: string
 }
 
 interface Details {
@@ -27,7 +27,7 @@ const i18n = {
 
 const ArrayListHome: Array<Details | Anchor> = [
   {
-    href: "/search?stage=precatechumenate,catechumenate,election,liturgy&tags=psalm&advent&children's song&christmas&communion&lent&easter&entrance&exit&fraction of bread&lutes and vespers&peace and offerings&pentecost&signing to the virgin",
+    href: '/search',
     iconText: '',
     text: 'Índice Alfabético',
     color: 'default'
@@ -36,25 +36,25 @@ const ArrayListHome: Array<Details | Anchor> = [
     summary: 'Etapas del Camino',
     UnorderedList: [
       {
-        href: "/search?stage=precatechumenate&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
+        href: '/search?stage=precatechumenate',
         iconText: 'P',
         text: 'Precatecumenado',
         color: 'precatechumenate'
       },
       {
-        href: "/search?stage=catechumenate&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
+        href: '/search?stage=catechumenate',
         iconText: 'C',
         text: 'Catecumenado',
         color: 'catechumenate'
       },
       {
-        href: "/search?stage=election&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
+        href: '/search?stage=election',
         iconText: 'E',
         text: 'Elección',
         color: 'election'
       },
       {
-        href: "/search?stage=liturgy&tags=psalm,advent,children's song,christmas,communion,lent,easter,entrance,exit,fraction of bread,lutes and vespers,peace and offerings,pentecost,signing to the virgin",
+        href: '/search?stage=liturgy',
         iconText: 'L',
         text: 'Liturgia',
         color: 'liturgy'
@@ -65,31 +65,31 @@ const ArrayListHome: Array<Details | Anchor> = [
     summary: 'Tiempo Litúrgico',
     UnorderedList: [
       {
-        href: '/search?tags=advent&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=advent',
         iconText: '',
         text: 'Adviento',
         color: 'default'
       },
       {
-        href: '/search?tags=christmas&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=christmas',
         iconText: '',
         text: 'Navidad',
         color: 'default'
       },
       {
-        href: '/search?tags=lent&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=lent',
         iconText: '',
         text: 'Cuaresma',
         color: 'default'
       },
       {
-        href: '/search?tags=easter&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=easter',
         iconText: '',
         text: 'Pascua',
         color: 'default'
       },
       {
-        href: '/search?tags=pentecost&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=pentecost',
         iconText: '',
         text: 'Pentecostés',
         color: 'default'
@@ -100,46 +100,39 @@ const ArrayListHome: Array<Details | Anchor> = [
     summary: 'Orden Litúrgico',
     UnorderedList: [
       {
-        href: '/search?tags=entrance&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=entrance',
         iconText: '',
-        text: 'Entrada',
-        color: 'default'
+        text: 'Entrada'
       },
       {
-        href: '/search?tags=peace and offerings&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=peace and offerings',
         iconText: '',
-        text: 'Paz y ofrendas',
-        color: 'default'
+        text: 'Paz y ofrendas'
       },
       {
-        href: '/search?tags=fraction of bread&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=fraction of bread',
         iconText: '',
-        text: 'Fracción del pan',
-        color: 'default'
+        text: 'Fracción del pan'
       },
       {
-        href: '/search?tags=exit&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=exit',
         iconText: '',
-        text: 'Salida',
-        color: 'default'
+        text: 'Salida'
       },
       {
-        href: '/search?tags=signing to the virgin&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=signing to the virgin',
         iconText: '',
-        text: 'Canto a la Virgen',
-        color: 'default'
+        text: 'Canto a la Virgen'
       },
       {
-        href: "/search?tags=children's song&stage=liturgy,election,catechumenate,precatechumenate",
+        href: "/search?tags=children's song",
         iconText: '',
-        text: 'Cantos de los niños',
-        color: 'default'
+        text: 'Cantos de los niños'
       },
       {
-        href: '/search?tags=lutes and vespers&stage=liturgy,election,catechumenate,precatechumenate',
+        href: '/search?tags=lutes and vespers',
         iconText: '',
-        text: 'Laudes y visperas',
-        color: 'default'
+        text: 'Laudes y visperas'
       }
     ]
   }
@@ -188,14 +181,14 @@ export class PageHome extends LitElement {
     <main>
       <h1>${i18n[lang].indexTittle}</h1>
       <section>
-        ${ArrayListHome.map(function (list) {
+        ${ArrayListHome.map((list) => {
           if ('summary' in list) {
             return html`
             <c-details sumary="${list.summary}">
               ${list.UnorderedList.map(item => {
                 return html`
                 <c-list-item href="${item.href}" >
-                  <c-list-item-icon slot="icon" color="${item.color}" text="${item.iconText}"></c-list-item-icon>
+                  <c-list-item-icon slot="icon" color="${item.color ?? ''}" text="${item.iconText}"></c-list-item-icon>
                   <span slot="text">${item.text}</span>
                 </c-list-item>`
               })}
@@ -203,7 +196,7 @@ export class PageHome extends LitElement {
           } else if ('href' in list) {
             return html`
             <c-list-item href="${list.href}" >
-              <c-list-item-icon slot="icon" color="${list.color}" text="${list.iconText}"></c-list-item-icon>
+              <c-list-item-icon slot="icon" color="${list.color ?? ''}" text="${list.iconText}"></c-list-item-icon>
               <span slot="text">${list.text}</span>
             </c-list-item>`
           } else {
