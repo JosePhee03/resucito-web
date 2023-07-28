@@ -1,4 +1,4 @@
-import { getSearchQuery, updateQueryTags } from '@/util/queryHandle'
+import { getSearchQuery, removeTagsSearchQuery } from '@/util/queryHandle'
 import { LitElement, html, css, nothing } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
@@ -37,6 +37,6 @@ export class CFilter extends LitElement {
   }
 
   _removeTag (event: CustomEvent) {
-    updateQueryTags(event.detail)
+    removeTagsSearchQuery(event.detail)
   }
 }

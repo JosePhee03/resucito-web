@@ -1,7 +1,6 @@
 import { LitElement, html, css } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-import '@components'
 import './components'
 
 interface Anchor {

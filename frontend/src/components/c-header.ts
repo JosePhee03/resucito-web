@@ -1,9 +1,28 @@
 import { LitElement, html, css } from 'lit'
-import { customElement } from 'lit/decorators.js'
-import { CAside } from '.'
+import { customElement, state } from 'lit/decorators.js'
 
 @customElement('c-header')
 export class CHeader extends LitElement {
+  @state() variant: 'home' | 'search' = 'home'
+
+  firstUpdated () {
+    this._updateNavigation()
+    window.addEventListener('vaadin-router-location-changed', this._updateNavigation.bind(this))
+  }
+
+  disconnectedCallback () {
+    super.disconnectedCallback()
+    console.log('dicoasdadsadasdasd')
+    window.removeEventListener('vaadin-router-location-changed', this._updateNavigation.bind(this))
+  }
+
+  _updateNavigation () {
+    const path = window.location.pathname
+    console.log('path', path)
+    if (path === '/') this.variant = 'home'
+    if (path === '/search') this.variant = 'search'
+  }
+
   static styles = [
     css`
       :host {
@@ -18,11 +37,11 @@ export class CHeader extends LitElement {
         width: 100%;
         background: var(--primary-color);
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-content: space-between;
         align-items: center;
         padding:  var(--spacing-sm) var(--spacing-sm);
         box-shadow: 2px 0 2px var(--neutral-light-color);
+        grid-template-columns: auto 1fr auto;
+        gap: var(--spacing-md)
       }
 
       .logo-text {
@@ -44,6 +63,7 @@ export class CHeader extends LitElement {
 
       .center {
         display: flex;
+        justify-content: center;
         align-items: center;
       }
 
@@ -55,19 +75,23 @@ export class CHeader extends LitElement {
       }
 
       c-search {
+        max-width: 640px;
+      }
+
+      c-search.home {
         display: none;
       }
 
 
       @media (min-width: 768px) {
-        c-search {
+        c-search.home {
           display: block;
         }
         #search-button {
           display: none;
         }
         header {
-          grid-template-columns: 1fr auto auto;
+          grid-template-columns: 1fr minmax(auto, 600px) 1fr;
           gap: var(--spacing-xl)
         }
       }
@@ -79,10 +103,6 @@ export class CHeader extends LitElement {
         #search-button {
           display: none;
         }
-        header {
-          grid-template-columns: 1fr 460px 1fr;
-          gap: var(--spacing-xl)
-        }
         .center {
           display: flex;
         }
@@ -92,24 +112,17 @@ export class CHeader extends LitElement {
     `
   ]
 
-  _handleClickMenu () {
-    const asideMenu = document.querySelector('c-aside')
-    if (asideMenu instanceof CAside) {
-      asideMenu.toggleAttribute('open')
-    }
-  }
-
-  render () {
+  _templateHeaderHome () {
     return html`
-      <header>
+      <header variant="home">
         <div class="left">
-          <c-button>
+          <c-button type="button" ariaLabel="Abrir menu lateral">
             <c-icon id="menu" size="xl"></c-icon>
           </c-button>
           <a class="logo-text" href="/">Resucito</a>
         </div>
         <div class="center">
-          <c-search></c-search>
+          <c-search class="home"></c-search>
         </div>
         <div class="right">
           <a href="/search">
@@ -122,5 +135,32 @@ export class CHeader extends LitElement {
         </div>
       </header>
     `
+  }
+
+  _templateHeaderSearch () {
+    return html`
+      <header variant="search">
+        <div class="left">
+          <c-button type="button" ariaLabel="Volver hacia atrás" @click="${() => window.history.back()}">
+            <c-icon direction="left" id="arrow" size="xl"></c-icon>
+          </c-button>
+        </div>
+        <div class="center">
+          <c-search></c-search>
+        </div>
+        <div class="right">
+          <c-icon id="moon" size="xl"></c-icon>
+        </div>
+      </header>
+    `
+  }
+
+  render () {
+    switch (this.variant) {
+      case 'search':
+        return this._templateHeaderSearch()
+      default:
+        return this._templateHeaderHome()
+    }
   }
 }

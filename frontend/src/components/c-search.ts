@@ -1,5 +1,6 @@
+import { getSearchQuery, updateSearchQuery } from '@/util/queryHandle'
 import { LitElement, html, css } from 'lit'
-import { customElement, state } from 'lit/decorators.js'
+import { customElement, query, state } from 'lit/decorators.js'
 
 const i18n = {
   es: {
@@ -20,7 +21,8 @@ const lang = 'es'
 
 @customElement('c-search')
 export class CSearch extends LitElement {
-  @state() value = ''
+  @state() value = getSearchQuery().q
+  @query('.input-search') inputSearch: HTMLInputElement | undefined
 
   static styles = [
     css`
@@ -73,6 +75,16 @@ export class CSearch extends LitElement {
     `
   ]
 
+  firstUpdated () {
+    window.addEventListener('keydown', this._handleKeyDown.bind(this))
+  }
+
+  disconnectedCallback () {
+    super.disconnectedCallback()
+    window.removeEventListener('keydown', this._handleKeyDown.bind(this))
+    console.log('disconned')
+  }
+
   render () {
     return html`
       <form @submit="${this._handleSubmit}" role="search" method="get">
@@ -80,9 +92,10 @@ export class CSearch extends LitElement {
           placeholder="${i18n[lang].placeholder}"
           class="input-search"
           type="text"
-          accesskey="k"
           name="search"
           aria-label="${i18n[lang].inputSearch}"
+          @input="${this._handleInput}"
+          value=${this.value}
         >
         <div class="button-cont">
           <c-button aria-hidden="true" type="reset" ariaLabel="${i18n[lang].buttonReset}">
@@ -97,10 +110,23 @@ export class CSearch extends LitElement {
     `
   }
 
-  _handleSubmit (event: Event) {
+  _handleSubmit (event: SubmitEvent) {
     event.preventDefault()
     const form = event.currentTarget as HTMLFormElement
     const searchData = new FormData(form).get('search') as string
-    window.location.replace(`/search?q=${searchData}`)
+    updateSearchQuery(searchData)
+  }
+
+  _handleKeyDown () {
+    if (this.inputSearch instanceof HTMLInputElement) {
+      this.inputSearch.focus()
+    }
+  }
+
+  _handleInput (event: InputEvent) {
+    const input = event.target
+    if (input instanceof HTMLInputElement) {
+      this.value = input.value
+    }
   }
 }

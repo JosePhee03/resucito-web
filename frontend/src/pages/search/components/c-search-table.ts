@@ -8,7 +8,7 @@ import { FetchSearchCanticles } from '../controllers/fetchSearchCanticles'
 export class CSearchTable extends LitElement {
   data = new FetchSearchCanticles(this)
 
-  @query('#observerTarget') observerTarget: HTMLDivElement | undefined
+  @query('#observerTarget') observerTarget?: HTMLDivElement
 
   static styles = [
     css`
@@ -19,7 +19,7 @@ export class CSearchTable extends LitElement {
       * { box-sizing: border-box }
 
       .table {
-        width: 100%
+        width: 100%;
       }
 
       .table-row {
@@ -126,9 +126,10 @@ export class CSearchTable extends LitElement {
   }
 
   render () {
-    const { canticles, isLoading } = this.data
+    const { canticles, isLoading, total, q } = this.data
 
     return html`
+    <c-search-details .total="${total}" .search="${q}"></c-search-details>
     <div role="grid" aria-rowcount="${canticles.length + 1}" aria-colcount="${3}" class="table">
       <div role="row" aria-rowindex="1" class="table-row table-head">
         <div role="columnheader" aria-colindex="1" class="col-1">Page</div>
@@ -150,9 +151,8 @@ export class CSearchTable extends LitElement {
           this.data._fetchData()
         }
       },
-      { threshold: 1 }
+      { threshold: 0.5 }
     )
-
     if (this.observerTarget instanceof HTMLDivElement) {
       observer.observe(this.observerTarget)
     }

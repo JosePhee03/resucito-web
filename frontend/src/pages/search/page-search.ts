@@ -1,7 +1,6 @@
 import { LitElement, html, css } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-import '@components'
 import './components'
 
 @customElement('page-search')
@@ -9,15 +8,15 @@ export class PageSearch extends LitElement {
   static styles = [
     css`
       :host {
-        display: grid;
-        place-items: center;
+        display: block;
       }
 
       * { box-sizing: border-box }
 
       main {
         height: 100%;
-        max-width: 640px;
+        max-width: 600px;
+        margin: 0 auto;
         gap: var(--spacing-sm);
         display: flex;
         flex-direction: column;

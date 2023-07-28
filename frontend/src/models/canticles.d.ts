@@ -2,7 +2,7 @@ import { Canticle } from 'canticle'
 
 export interface CanticlesAPIResponse {
   canticles: Canticle[]
-  total: number
+  limit: number
   skip: number
   length: number
 }

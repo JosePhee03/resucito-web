@@ -1,15 +1,17 @@
 import { LitElement, html, css } from 'lit'
 import { customElement, property } from 'lit/decorators.js'
 
-type IconsID = 'menu' | 'search' | 'exit' | 'moon' | 'chevron-down' | 'chevron-up' | 'home' | 'settings' | 'list-music'
+type IconsID = 'menu' | 'search' | 'exit' | 'moon' | 'chevron-down' | 'chevron-up' | 'home' | 'settings' | 'list-music' | 'arrow'
 type IconsSize = 'sm' | 'md' | 'lg' | 'xl'
 type IconColor = 'text-color' | 'currentColor'
+type Direction = 'up' | 'down' | 'left' | 'right'
 
 @customElement('c-icon')
 export class CIcon extends LitElement {
   @property({ type: String }) id: IconsID = 'menu'
   @property({ type: String }) size: IconsSize = 'md'
   @property({ type: String }) color: IconColor = 'currentColor'
+  @property({ type: String }) direction: Direction | undefined
 
   static styles = [
     css`
@@ -17,7 +19,6 @@ export class CIcon extends LitElement {
         display: block;
         line-height: 0;
       }
-
       .icon {
         stroke-linecap: var(--stroke-round);
         stroke-linejoin: var(--stroke-round);
@@ -40,6 +41,22 @@ export class CIcon extends LitElement {
         stroke: currentColor;
       }
 
+      .up {
+        rotate: -90deg;
+      }
+
+      .left {
+        rotate: 180deg;
+      }
+
+      .right {
+        rotate: 0;
+      }
+
+      .down {
+        rotate: 90deg;
+      }
+
     `
   ]
 
@@ -52,7 +69,7 @@ export class CIcon extends LitElement {
     }
 
     return html`
-    <svg focusable="false" class="icon ${this.size} ${this.color}" width="${SIZE_ICON[this.size]}" height="${SIZE_ICON[this.size]}">
+    <svg focusable="false" class="icon ${this.size} ${this.color} ${this.direction ?? ''}" width="${SIZE_ICON[this.size]}" height="${SIZE_ICON[this.size]}">
       <use href="/icons.svg/#${this.id}" />
     </svg>
     `
