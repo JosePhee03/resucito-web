@@ -22,6 +22,8 @@
       "@models/*": ["./src/models/*"],
       "@pages/*": ["./src/pages/*"],
       "@components/*": ["./src/components/*"],
+      "@router/*": ["./src/router/*"],
+      "@util/*": ["./src/util/*"]
     },
 
     /* Bundler mode */

@@ -9,7 +9,9 @@ export default defineConfig({
       '@models': path.resolve(__dirname, './src/models'),
       '@services': path.resolve(__dirname, './src/services'),
       '@components': path.resolve(__dirname, './src/components'),
-      '@pages': path.resolve(__dirname, './src/pages')
+      '@pages': path.resolve(__dirname, './src/pages'),
+      '@router': path.resolve(__dirname, './src/router'),
+      '@util': path.resolve(__dirname, './src/util')
     }
   }
 })
