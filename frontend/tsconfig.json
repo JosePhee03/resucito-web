@@ -38,8 +38,11 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    //"typeRoots": ["../@types"],
+    //"declaration": true,
+    //"declarationDir": "../@types",
+    "types": ["../@types/canticle"]
 
-    "typeRoots": ["../@types"]
   },
   "include": ["src"],
   "references": [{ "path": "tsconfig.node.json" }]

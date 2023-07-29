@@ -6,8 +6,6 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "typeRoots": ["../@types"]
-
   },
   "include": [
     "vite.config.ts"
