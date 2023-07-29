@@ -1,5 +1,4 @@
 import { StateCreator, createStore } from 'zustand/vanilla'
-import CANTICLES_JSON from '../../../backend/build/RESUCITO/ES/v6/2014.json'
 import { PersistOptions, createJSONStorage, persist } from 'zustand/middleware'
 import { Canticle } from 'canticle'
 
@@ -21,7 +20,7 @@ interface Action {
 export const storeCanticle = createStore<State & Action>(
   (persist as Persist)(
     (set, get) => ({
-      AllCanticles: CANTICLES_JSON as Canticle[],
+      AllCanticles: [],
       setCanticle: (canticle) => set(({ AllCanticles }) => {
         const isCanticle = AllCanticles.some((c) => c.page === canticle?.page)
         if (isCanticle || canticle == null) return {}
