@@ -3,12 +3,12 @@ import { createCanticle, deleteCanticle, getCanticle, getCanticles, searchCantic
 
 const router = Router()
 
-router.get('/canticles', getCanticles)
-router.get('/canticles/search', searchCanticles)
-router.get('/canticles/:page', getCanticle)
+router.get('/api/canticles', getCanticles)
+router.get('/api/canticles/search', searchCanticles)
+router.get('/api/canticles/:page', getCanticle)
 
-router.put('/canticles/:page', updateCanticle)
-router.delete('/canticles/:page', deleteCanticle)
-router.post('/canticles', createCanticle)
+router.put('/api/canticles/:page', updateCanticle)
+router.delete('/api/canticles/:page', deleteCanticle)
+router.post('/api/canticles', createCanticle)
 
 export default router
