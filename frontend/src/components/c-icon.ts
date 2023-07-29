@@ -70,7 +70,7 @@ export class CIcon extends LitElement {
 
     return html`
     <svg focusable="false" class="icon ${this.size} ${this.color} ${this.direction ?? ''}" width="${SIZE_ICON[this.size]}" height="${SIZE_ICON[this.size]}">
-      <use href="/icons.svg/#${this.id}" />
+      <use href="/icons.svg#${this.id}" />
     </svg>
     `
   }
