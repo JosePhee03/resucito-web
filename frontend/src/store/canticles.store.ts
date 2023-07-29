@@ -1,7 +1,7 @@
-import { Canticle } from '@/models/canticles'
 import { StateCreator, createStore } from 'zustand/vanilla'
 import CANTICLES_JSON from '../../../backend/build/RESUCITO/ES/v6/2014.json'
 import { PersistOptions, createJSONStorage, persist } from 'zustand/middleware'
+import { Canticle } from 'canticle'
 
 interface State {
   AllCanticles: Canticle[]

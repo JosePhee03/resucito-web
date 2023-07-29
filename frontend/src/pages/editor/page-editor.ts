@@ -1,19 +1,10 @@
 import { LitElement, html, css } from 'lit'
-import { customElement, state } from 'lit/decorators.js'
+import { customElement } from 'lit/decorators.js'
 
-import '@components'
 import './components/c-canticle-json'
-
-import { CanticleController } from '@/components/CanticleController'
-import { Canticle } from '@/models/canticles'
-import { router } from '@/router/router'
 
 @customElement('page-editor')
 export class PageEditor extends LitElement {
-  @state() page: number = Number(router.location.params.page)
-  _data = new CanticleController(this, this.page)
-  @state() canticle: Canticle | null = null
-
   static styles = [
     css`
       :host {
@@ -49,21 +40,18 @@ export class PageEditor extends LitElement {
   ]
 
   render () {
-    const { canticle, isError, isLoading } = this._data
-    console.log({ canticle, isError, isLoading })
     return html`
       <main>
         <form @change-json="${this._changeCanticle}">
           <button type="submit">Cambiar</button>
-          <c-canticle-json .canticle="${canticle}"></c-canticle-json>
-          <c-canticle .canticle="${canticle}"></c-canticle>
+          <c-canticle-json></c-canticle-json>
+          <c-canticle></c-canticle>
         </form>
       </main>
     `
   }
 
-  _changeCanticle (event: CustomEvent) {
-    this._data.canticle = JSON.parse(event.detail)
+  _changeCanticle () {
     this.requestUpdate()
   }
 }

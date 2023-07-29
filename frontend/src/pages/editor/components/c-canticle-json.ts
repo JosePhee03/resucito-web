@@ -1,11 +1,11 @@
-import { Canticle } from '@/models/canticles'
+import { Canticle } from 'canticle'
 import { LitElement, html, css } from 'lit'
 import { customElement, state } from 'lit/decorators.js'
 import { when } from 'lit/directives/when.js'
 
 @customElement('c-canticle-json')
 export class CCanticleJson extends LitElement {
-  @state() canticle: Canticle | null = null
+  @state() canticle?: Canticle
 
   static styles = [
     css`
@@ -26,7 +26,7 @@ export class CCanticleJson extends LitElement {
   ]
 
   render () {
-    return when(this.canticle != null, () =>
+    return when(this.canticle !== undefined, () =>
       html`
         <textarea @input="${this._changeJson}" name="json">
           ${JSON.stringify(this.canticle, null, '\t')}
@@ -34,7 +34,6 @@ export class CCanticleJson extends LitElement {
     `)
   }
 
-  _changeJson (e: InputEvent) {
-    this.dispatchEvent(new CustomEvent('change-json', { detail: e.target.value, bubbles: true, composed: true }))
+  _changeJson () {
   }
 }

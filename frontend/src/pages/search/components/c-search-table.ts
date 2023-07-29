@@ -126,14 +126,13 @@ export class CSearchTable extends LitElement {
   }
 
   render () {
-    const { canticles, isLoading, total, q } = this.data
+    const { canticles, isLoading, total } = this.data
 
     return html`
-    <c-search-details .total="${total}" .search="${q}"></c-search-details>
     <div role="grid" aria-rowcount="${canticles.length + 1}" aria-colcount="${3}" class="table">
       <div role="row" aria-rowindex="1" class="table-row table-head">
         <div role="columnheader" aria-colindex="1" class="col-1">Page</div>
-        <div role="columnheader" aria-colindex="2" class="col-2">Canticle</div>
+        <div role="columnheader" aria-colindex="2" class="col-2">Canticle: ${total}</div>
         <div role="columnheader" aria-colindex="3" class="col-3">Favorite</div>
       </div>
       ${canticles.map((canticle, index) => this._rowSearchCanticle(canticle, index))}

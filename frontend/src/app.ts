@@ -11,6 +11,7 @@ export class App extends LitElement {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
+        gap: 1rem;
       }
     `
   ]

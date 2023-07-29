@@ -133,7 +133,7 @@ export class CCanticle extends LitElement {
           <b class="title">${title}</b>
           <b class="subtitle">${subtitle}</b>
         </div>
-        ${lyric.split('\n').map((text) => {
+        ${lyric.split('\n').map((text: string) => {
           const { content, type } = this._parseLyric(text)
           return content !== undefined && type !== undefined
           ? html`<span class="${type}">${content}</span>`

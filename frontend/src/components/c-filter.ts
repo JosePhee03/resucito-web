@@ -11,13 +11,12 @@ export class CFilter extends LitElement {
         display: flex;
         align-items: center;
         width: 100%;
-        height: 2rem;
+        height: auto;
       }
       div {
         display: flex;
-        background: green;
-        position: absolute;
         width: 100%;
+        flex-wrap: nowrap;
         gap: var(--spacing-sm);
       }
     `
@@ -25,7 +24,7 @@ export class CFilter extends LitElement {
 
   render () {
     const { stage, tags } = getSearchQuery()
-    const TAGS = [...tags.split(','), ...stage.split(',')]
+    const TAGS = [...stage.split(','), ...tags.split(',')]
     return html`
       <div>
         ${TAGS.map(text => {
