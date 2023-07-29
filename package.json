@@ -17,7 +17,7 @@
     "dev": "pnpm run dev:backend && dev:frontend",
     "build:backend": "pnpm run --filter backend build",
     "build:frontend": "pnpm run --filter frontend build",
-    "start": "pnpm run build:frontend && pnpm run start:backend"
+    "start": "pnpm run build:frontend && pnpm run build:backend && pnpm run start:backend"
   },
   "keywords": ["frondend", "backend", "SPA", "PWA", "typescript", "lit-element"],
   "author": "Jose Luis Gutierrez <joselugz03@gmail.com>",
