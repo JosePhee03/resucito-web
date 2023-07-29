@@ -119,7 +119,7 @@ export class CHeader extends LitElement {
           <c-button type="button" ariaLabel="Abrir menu lateral">
             <c-icon id="menu" size="xl"></c-icon>
           </c-button>
-          <a class="logo-text" href="/">Resucito</a>
+          <a class="logo-text" href="/">Resucitó</a>
         </div>
         <div class="center">
           <c-search class="home"></c-search>
